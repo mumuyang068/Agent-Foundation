@@ -1,0 +1,265 @@
+{
+  "run_id": "a2e6352fc26d",
+  "recorded_at": "2026-11-18T07:02:30.989975+00:00",
+  "channel": "installed Python client over HTTP",
+  "data": "synthetic",
+  "scope": {
+    "tenant_id": "portfolio",
+    "space_id": "graph-a2e6352fc26d"
+  },
+  "proposed_by": "analyst-a2e6352fc26d",
+  "reviewed_by": "reviewer-a2e6352fc26d",
+  "review_denied": {
+    "status": 403,
+    "code": "grant_scope_denied"
+  },
+  "source_revision": "64df5768-8831-45be-9de6-91909573ea3a",
+  "source_range": {
+    "start": 0,
+    "end": 5
+  },
+  "proposal_state": "applied",
+  "idempotent_replay_equal": true,
+  "visible_before_revoke": 1,
+  "visible_after_revoke": 0,
+  "proposal": {
+    "proposal_id": "caba79be-2f03-49fa-946e-1432cf22cf28",
+    "scope": {
+      "tenant_id": "portfolio",
+      "space_id": "graph-a2e6352fc26d",
+      "project_id": null
+    },
+    "revision": 3,
+    "operations": [
+      {
+        "action": "put_node",
+        "node": {
+          "node_id": "alpha",
+          "scope": {
+            "tenant_id": "portfolio",
+            "space_id": "graph-a2e6352fc26d",
+            "project_id": null
+          },
+          "revision": 1,
+          "node_type": "component",
+          "label": "Alpha",
+          "properties": {},
+          "source_refs": [
+            {
+              "domain": "evidence",
+              "scope": {
+                "tenant_id": "portfolio",
+                "space_id": "graph-a2e6352fc26d",
+                "project_id": null
+              },
+              "resource_type": "evidence_revision",
+              "resource_id": "64df5768-8831-45be-9de6-91909573ea3a",
+              "revision": "64df5768-8831-45be-9de6-91909573ea3a"
+            }
+          ],
+          "status": "active",
+          "created_at": "2026-11-18T07:02:30.842956Z",
+          "updated_at": "2026-11-18T07:02:30.842956Z"
+        },
+        "edge": null,
+        "target_id": null,
+        "expected_revision": null
+      },
+      {
+        "action": "put_node",
+        "node": {
+          "node_id": "beta",
+          "scope": {
+            "tenant_id": "portfolio",
+            "space_id": "graph-a2e6352fc26d",
+            "project_id": null
+          },
+          "revision": 1,
+          "node_type": "component",
+          "label": "Beta",
+          "properties": {},
+          "source_refs": [
+            {
+              "domain": "evidence",
+              "scope": {
+                "tenant_id": "portfolio",
+                "space_id": "graph-a2e6352fc26d",
+                "project_id": null
+              },
+              "resource_type": "evidence_revision",
+              "resource_id": "64df5768-8831-45be-9de6-91909573ea3a",
+              "revision": "64df5768-8831-45be-9de6-91909573ea3a"
+            }
+          ],
+          "status": "active",
+          "created_at": "2026-11-18T07:02:30.842956Z",
+          "updated_at": "2026-11-18T07:02:30.842956Z"
+        },
+        "edge": null,
+        "target_id": null,
+        "expected_revision": null
+      },
+      {
+        "action": "put_edge",
+        "node": null,
+        "edge": {
+          "edge_id": "alpha-depends-on-beta",
+          "scope": {
+            "tenant_id": "portfolio",
+            "space_id": "graph-a2e6352fc26d",
+            "project_id": null
+          },
+          "revision": 1,
+          "relation_type": "depends_on",
+          "from_node_id": "alpha",
+          "to_node_id": "beta",
+          "properties": {},
+          "temporal": null,
+          "source_refs": [
+            {
+              "domain": "evidence",
+              "scope": {
+                "tenant_id": "portfolio",
+                "space_id": "graph-a2e6352fc26d",
+                "project_id": null
+              },
+              "resource_type": "evidence_revision",
+              "resource_id": "64df5768-8831-45be-9de6-91909573ea3a",
+              "revision": "64df5768-8831-45be-9de6-91909573ea3a"
+            }
+          ],
+          "status": "active",
+          "created_at": "2026-11-18T07:02:30.842956Z",
+          "updated_at": "2026-11-18T07:02:30.842956Z"
+        },
+        "target_id": null,
+        "expected_revision": null
+      }
+    ],
+    "evidence_refs": [
+      {
+        "domain": "evidence",
+        "scope": {
+          "tenant_id": "portfolio",
+          "space_id": "graph-a2e6352fc26d",
+          "project_id": null
+        },
+        "resource_type": "evidence_revision",
+        "resource_id": "64df5768-8831-45be-9de6-91909573ea3a",
+        "revision": "64df5768-8831-45be-9de6-91909573ea3a"
+      }
+    ],
+    "status": "applied",
+    "proposed_by": "analyst-a2e6352fc26d",
+    "reviewed_by": "reviewer-a2e6352fc26d",
+    "applied_by": "reviewer-a2e6352fc26d",
+    "schema_id": null,
+    "schema_version": null,
+    "created_at": "2026-11-18T07:02:30.849956Z",
+    "updated_at": "2026-11-18T07:02:30.913870Z"
+  },
+  "query_before": {
+    "hits": [
+      {
+        "node": {
+          "node_id": "alpha",
+          "scope": {
+            "tenant_id": "portfolio",
+            "space_id": "graph-a2e6352fc26d",
+            "project_id": null
+          },
+          "revision": 1,
+          "node_type": "component",
+          "label": "Alpha",
+          "properties": {},
+          "source_refs": [
+            {
+              "domain": "evidence",
+              "scope": {
+                "tenant_id": "portfolio",
+                "space_id": "graph-a2e6352fc26d",
+                "project_id": null
+              },
+              "resource_type": "evidence_revision",
+              "resource_id": "64df5768-8831-45be-9de6-91909573ea3a",
+              "revision": "64df5768-8831-45be-9de6-91909573ea3a"
+            }
+          ],
+          "status": "active",
+          "created_at": "2026-11-18T07:02:30.842956Z",
+          "updated_at": "2026-11-18T07:02:30.842956Z"
+        },
+        "score": 1.0
+      }
+    ],
+    "execution": {
+      "request_id": "75a93e90-4695-4344-a097-c06baa3731f0",
+      "grant_fingerprint": "8f0f71264184b998455c968ba35ce8258e3b8944d7d27fd925a17ec2c681db3b",
+      "policy_fingerprint": "6e4daec9c0bf4f41b3c5c4d69a2d7c4984b08b4c03a29cf063c25a042214c4c1",
+      "execution_profile_fingerprint": "9bfef69a259d027014cd9b456032248f7c695ef93e255ba9bd56bdc0b0e25276",
+      "output_refs": [
+        {
+          "domain": "graph",
+          "scope": {
+            "tenant_id": "portfolio",
+            "space_id": "graph-a2e6352fc26d",
+            "project_id": null
+          },
+          "resource_type": "graph_node",
+          "resource_id": "alpha",
+          "revision": "1"
+        }
+      ],
+      "diagnostics": {
+        "eligible": 2,
+        "algorithm_id": "graph.lexical-v2",
+        "scan_limit": 1000,
+        "scanned": 2,
+        "scan_limit_reached": false,
+        "algorithm_items_materialized": 1,
+        "algorithm_items_inspected": 1,
+        "algorithm_item_limit_reached": false,
+        "duplicate_algorithm_items": 0,
+        "invalid_algorithm_items": 0,
+        "stale_algorithm_items": 0,
+        "result_limit_reached": false
+      }
+    },
+    "algorithm": {
+      "algorithm_id": "graph.lexical-v2",
+      "implementation_version": "1"
+    },
+    "authority_watermark": 1
+  },
+  "query_after": {
+    "hits": [],
+    "execution": {
+      "request_id": "2d53bc41-02e3-460f-a1b8-6bf1e7d4f7b7",
+      "grant_fingerprint": "8f0f71264184b998455c968ba35ce8258e3b8944d7d27fd925a17ec2c681db3b",
+      "policy_fingerprint": "6e4daec9c0bf4f41b3c5c4d69a2d7c4984b08b4c03a29cf063c25a042214c4c1",
+      "execution_profile_fingerprint": "9bfef69a259d027014cd9b456032248f7c695ef93e255ba9bd56bdc0b0e25276",
+      "output_refs": [],
+      "diagnostics": {
+        "eligible": 0,
+        "algorithm_id": "graph.lexical-v2",
+        "scan_limit": 1000,
+        "scanned": 2,
+        "scan_limit_reached": false,
+        "algorithm_items_materialized": 0,
+        "algorithm_items_inspected": 0,
+        "algorithm_item_limit_reached": false,
+        "duplicate_algorithm_items": 0,
+        "invalid_algorithm_items": 0,
+        "stale_algorithm_items": 0,
+        "result_limit_reached": false
+      }
+    },
+    "algorithm": {
+      "algorithm_id": "graph.lexical-v2",
+      "implementation_version": "1"
+    },
+    "authority_watermark": 1
+  },
+  "runner_sha256": "afbeed024cd59511d745d82bde5446f70ea340843e0c730319a39664cc1f6212",
+  "service_version": "1.0.0a32"
+}

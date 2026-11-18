@@ -1,0 +1,787 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "schema_version": "agent-foundation.public-routes.v1",
+  "namespace": "/api/foundation/v1",
+  "operations": [
+    {
+      "operation_id": "access.audit",
+      "domain": "access",
+      "method": "GET",
+      "path": "/access/audit"
+    },
+    {
+      "operation_id": "access.authorize",
+      "domain": "access",
+      "method": "POST",
+      "path": "/access/authorize"
+    },
+    {
+      "operation_id": "access.get_delegation",
+      "domain": "access",
+      "method": "GET",
+      "path": "/access/delegations/{delegation_id}"
+    },
+    {
+      "operation_id": "access.get_grant",
+      "domain": "access",
+      "method": "GET",
+      "path": "/access/grants/{grant_id}"
+    },
+    {
+      "operation_id": "access.get_session",
+      "domain": "access",
+      "method": "GET",
+      "path": "/access/sessions/{session_id}"
+    },
+    {
+      "operation_id": "access.issue_session",
+      "domain": "access",
+      "method": "POST",
+      "path": "/access/sessions"
+    },
+    {
+      "operation_id": "access.list_grants",
+      "domain": "access",
+      "method": "GET",
+      "path": "/access/grants"
+    },
+    {
+      "operation_id": "access.put_delegation",
+      "domain": "access",
+      "method": "POST",
+      "path": "/access/delegations"
+    },
+    {
+      "operation_id": "access.put_grant",
+      "domain": "access",
+      "method": "POST",
+      "path": "/access/grants"
+    },
+    {
+      "operation_id": "access.revoke_delegation",
+      "domain": "access",
+      "method": "POST",
+      "path": "/access/delegations/{delegation_id}/revoke"
+    },
+    {
+      "operation_id": "access.revoke_grant",
+      "domain": "access",
+      "method": "POST",
+      "path": "/access/grants/{grant_id}/revoke"
+    },
+    {
+      "operation_id": "access.revoke_session",
+      "domain": "access",
+      "method": "POST",
+      "path": "/access/sessions/{session_id}/revoke"
+    },
+    {
+      "operation_id": "applications.get",
+      "domain": "applications",
+      "method": "GET",
+      "path": "/applications/turns/{turn_id}"
+    },
+    {
+      "operation_id": "applications.observe",
+      "domain": "applications",
+      "method": "POST",
+      "path": "/applications/turns/{turn_id}/observations"
+    },
+    {
+      "operation_id": "applications.outcome",
+      "domain": "applications",
+      "method": "POST",
+      "path": "/applications/turns/{turn_id}/outcomes"
+    },
+    {
+      "operation_id": "applications.prepare",
+      "domain": "applications",
+      "method": "POST",
+      "path": "/applications/turns"
+    },
+    {
+      "operation_id": "context.assemble",
+      "domain": "context",
+      "method": "POST",
+      "path": "/context/assemblies"
+    },
+    {
+      "operation_id": "context.compare",
+      "domain": "context",
+      "method": "GET",
+      "path": "/context/snapshots/compare/{left_id}/{right_id}"
+    },
+    {
+      "operation_id": "context.get_resident",
+      "domain": "context",
+      "method": "GET",
+      "path": "/context/resident"
+    },
+    {
+      "operation_id": "context.get_snapshot",
+      "domain": "context",
+      "method": "GET",
+      "path": "/context/snapshots/{snapshot_id}"
+    },
+    {
+      "operation_id": "context.list_snapshots",
+      "domain": "context",
+      "method": "GET",
+      "path": "/context/snapshots"
+    },
+    {
+      "operation_id": "context.operation_receipt",
+      "domain": "context",
+      "method": "GET",
+      "path": "/context/operations/{operation_id}"
+    },
+    {
+      "operation_id": "context.preview_resident",
+      "domain": "context",
+      "method": "POST",
+      "path": "/context/resident/preview"
+    },
+    {
+      "operation_id": "context.replace_resident",
+      "domain": "context",
+      "method": "PUT",
+      "path": "/context/resident"
+    },
+    {
+      "operation_id": "context.replay",
+      "domain": "context",
+      "method": "POST",
+      "path": "/context/snapshots/{snapshot_id}/replay"
+    },
+    {
+      "operation_id": "context.replay_resident",
+      "domain": "context",
+      "method": "POST",
+      "path": "/context/resident/replay"
+    },
+    {
+      "operation_id": "context.snapshot",
+      "domain": "context",
+      "method": "POST",
+      "path": "/context/snapshots"
+    },
+    {
+      "operation_id": "context.snapshot_metadata",
+      "domain": "context",
+      "method": "POST",
+      "path": "/context/snapshot-metadata"
+    },
+    {
+      "operation_id": "evidence.admit",
+      "domain": "evidence",
+      "method": "POST",
+      "path": "/evidence/revisions"
+    },
+    {
+      "operation_id": "evidence.get_operation_receipt",
+      "domain": "evidence",
+      "method": "GET",
+      "path": "/evidence/operations/{operation_id}"
+    },
+    {
+      "operation_id": "evidence.get_revision",
+      "domain": "evidence",
+      "method": "GET",
+      "path": "/evidence/revisions/{revision_id}"
+    },
+    {
+      "operation_id": "evidence.get_support",
+      "domain": "evidence",
+      "method": "GET",
+      "path": "/evidence/supports/{support_id}"
+    },
+    {
+      "operation_id": "evidence.list_revisions",
+      "domain": "evidence",
+      "method": "GET",
+      "path": "/evidence/revisions"
+    },
+    {
+      "operation_id": "evidence.retrieval_status",
+      "domain": "evidence",
+      "method": "GET",
+      "path": "/evidence/retrieval/status"
+    },
+    {
+      "operation_id": "evidence.retrieval_watermark",
+      "domain": "evidence",
+      "method": "GET",
+      "path": "/evidence/authority/watermark"
+    },
+    {
+      "operation_id": "evidence.revalidate",
+      "domain": "evidence",
+      "method": "POST",
+      "path": "/evidence/revisions/{revision_id}/revalidate"
+    },
+    {
+      "operation_id": "evidence.revoke",
+      "domain": "evidence",
+      "method": "POST",
+      "path": "/evidence/revisions/{revision_id}/revoke"
+    },
+    {
+      "operation_id": "evidence.search",
+      "domain": "evidence",
+      "method": "POST",
+      "path": "/evidence/search"
+    },
+    {
+      "operation_id": "evidence.support",
+      "domain": "evidence",
+      "method": "POST",
+      "path": "/evidence/supports"
+    },
+    {
+      "operation_id": "graph.apply",
+      "domain": "graph",
+      "method": "POST",
+      "path": "/graph/proposals/{proposal_id}/apply"
+    },
+    {
+      "operation_id": "graph.get_edge",
+      "domain": "graph",
+      "method": "GET",
+      "path": "/graph/edges/{edge_id}"
+    },
+    {
+      "operation_id": "graph.get_edge_revision",
+      "domain": "graph",
+      "method": "GET",
+      "path": "/graph/edges/{edge_id}/revisions/{revision}"
+    },
+    {
+      "operation_id": "graph.get_node",
+      "domain": "graph",
+      "method": "GET",
+      "path": "/graph/nodes/{node_id}"
+    },
+    {
+      "operation_id": "graph.get_node_revision",
+      "domain": "graph",
+      "method": "GET",
+      "path": "/graph/nodes/{node_id}/revisions/{revision}"
+    },
+    {
+      "operation_id": "graph.get_operation_receipt",
+      "domain": "graph",
+      "method": "GET",
+      "path": "/graph/operations/{operation_id}"
+    },
+    {
+      "operation_id": "graph.get_proposal",
+      "domain": "graph",
+      "method": "GET",
+      "path": "/graph/proposals/{proposal_id}"
+    },
+    {
+      "operation_id": "graph.get_schema",
+      "domain": "graph",
+      "method": "GET",
+      "path": "/graph/schemas/{schema_id}/versions/{version}"
+    },
+    {
+      "operation_id": "graph.list_edges",
+      "domain": "graph",
+      "method": "GET",
+      "path": "/graph/edges"
+    },
+    {
+      "operation_id": "graph.list_nodes",
+      "domain": "graph",
+      "method": "GET",
+      "path": "/graph/nodes"
+    },
+    {
+      "operation_id": "graph.list_proposals",
+      "domain": "graph",
+      "method": "GET",
+      "path": "/graph/proposals"
+    },
+    {
+      "operation_id": "graph.list_schemas",
+      "domain": "graph",
+      "method": "GET",
+      "path": "/graph/schemas"
+    },
+    {
+      "operation_id": "graph.neighborhood",
+      "domain": "graph",
+      "method": "GET",
+      "path": "/graph/nodes/{node_id}/neighborhood"
+    },
+    {
+      "operation_id": "graph.propose",
+      "domain": "graph",
+      "method": "POST",
+      "path": "/graph/proposals"
+    },
+    {
+      "operation_id": "graph.propose_community_topology",
+      "domain": "graph",
+      "method": "POST",
+      "path": "/graph/proposals/community-topology"
+    },
+    {
+      "operation_id": "graph.propose_entity_normalization",
+      "domain": "graph",
+      "method": "POST",
+      "path": "/graph/proposals/entity-normalization"
+    },
+    {
+      "operation_id": "graph.propose_relation_evolution",
+      "domain": "graph",
+      "method": "POST",
+      "path": "/graph/proposals/relation-evolution"
+    },
+    {
+      "operation_id": "graph.propose_relation_reinforcement",
+      "domain": "graph",
+      "method": "POST",
+      "path": "/graph/proposals/relation-reinforcement"
+    },
+    {
+      "operation_id": "graph.propose_temporal_invalidation",
+      "domain": "graph",
+      "method": "POST",
+      "path": "/graph/temporal/{edge_id}/invalidate"
+    },
+    {
+      "operation_id": "graph.propose_temporal_relation",
+      "domain": "graph",
+      "method": "POST",
+      "path": "/graph/proposals/temporal-relation"
+    },
+    {
+      "operation_id": "graph.propose_temporal_supersession",
+      "domain": "graph",
+      "method": "POST",
+      "path": "/graph/temporal/{edge_id}/supersede"
+    },
+    {
+      "operation_id": "graph.publish_schema",
+      "domain": "graph",
+      "method": "POST",
+      "path": "/graph/schemas"
+    },
+    {
+      "operation_id": "graph.query",
+      "domain": "graph",
+      "method": "POST",
+      "path": "/graph/query"
+    },
+    {
+      "operation_id": "graph.query_temporal",
+      "domain": "graph",
+      "method": "POST",
+      "path": "/graph/temporal/query"
+    },
+    {
+      "operation_id": "graph.review",
+      "domain": "graph",
+      "method": "POST",
+      "path": "/graph/proposals/{proposal_id}/review"
+    },
+    {
+      "operation_id": "jobs.acknowledge",
+      "domain": "jobs",
+      "method": "POST",
+      "path": "/jobs/outbox/{event_id}/acknowledge"
+    },
+    {
+      "operation_id": "jobs.authorize",
+      "domain": "jobs",
+      "method": "POST",
+      "path": "/jobs/{job_id}/authorize"
+    },
+    {
+      "operation_id": "jobs.cancel",
+      "domain": "jobs",
+      "method": "POST",
+      "path": "/jobs/{job_id}/cancel"
+    },
+    {
+      "operation_id": "jobs.get",
+      "domain": "jobs",
+      "method": "GET",
+      "path": "/jobs/{job_id}"
+    },
+    {
+      "operation_id": "jobs.list_jobs",
+      "domain": "jobs",
+      "method": "GET",
+      "path": "/jobs"
+    },
+    {
+      "operation_id": "jobs.outbox",
+      "domain": "jobs",
+      "method": "GET",
+      "path": "/jobs/outbox/pending"
+    },
+    {
+      "operation_id": "jobs.plan",
+      "domain": "jobs",
+      "method": "POST",
+      "path": "/jobs"
+    },
+    {
+      "operation_id": "jobs.receipt",
+      "domain": "jobs",
+      "method": "GET",
+      "path": "/jobs/operations/{operation_id}"
+    },
+    {
+      "operation_id": "jobs.run_next",
+      "domain": "jobs",
+      "method": "POST",
+      "path": "/jobs/{job_id}/run-next"
+    },
+    {
+      "operation_id": "management.activate_index",
+      "domain": "management",
+      "method": "POST",
+      "path": "/management/indexes/{generation_id}/activate"
+    },
+    {
+      "operation_id": "management.activate_release",
+      "domain": "management",
+      "method": "POST",
+      "path": "/management/releases/{release_id}/activate"
+    },
+    {
+      "operation_id": "management.active_index",
+      "domain": "management",
+      "method": "GET",
+      "path": "/management/indexes/active/{domain}"
+    },
+    {
+      "operation_id": "management.active_release",
+      "domain": "management",
+      "method": "GET",
+      "path": "/management/releases/active"
+    },
+    {
+      "operation_id": "management.approve_release",
+      "domain": "management",
+      "method": "POST",
+      "path": "/management/releases/{release_id}/approve"
+    },
+    {
+      "operation_id": "management.approve_transfer",
+      "domain": "management",
+      "method": "POST",
+      "path": "/management/transfers/{transfer_id}/approve"
+    },
+    {
+      "operation_id": "management.begin_index",
+      "domain": "management",
+      "method": "POST",
+      "path": "/management/indexes"
+    },
+    {
+      "operation_id": "management.certify_extractor",
+      "domain": "management",
+      "method": "POST",
+      "path": "/management/extractors/{release_id}/certifications"
+    },
+    {
+      "operation_id": "management.create_backup",
+      "domain": "management",
+      "method": "POST",
+      "path": "/management/backups"
+    },
+    {
+      "operation_id": "management.diagnostics",
+      "domain": "management",
+      "method": "GET",
+      "path": "/management/diagnostics"
+    },
+    {
+      "operation_id": "management.evaluation",
+      "domain": "management",
+      "method": "POST",
+      "path": "/management/evaluations"
+    },
+    {
+      "operation_id": "management.execute_extractor",
+      "domain": "management",
+      "method": "POST",
+      "path": "/management/extractors/{release_id}/execute"
+    },
+    {
+      "operation_id": "management.execute_transfer",
+      "domain": "management",
+      "method": "POST",
+      "path": "/management/transfers/{transfer_id}/execute"
+    },
+    {
+      "operation_id": "management.get_evaluation",
+      "domain": "management",
+      "method": "GET",
+      "path": "/management/evaluations/{evaluation_id}"
+    },
+    {
+      "operation_id": "management.get_extractor_certificate",
+      "domain": "management",
+      "method": "GET",
+      "path": "/management/extractor-certificates/{certificate_id}"
+    },
+    {
+      "operation_id": "management.get_extractor_execution",
+      "domain": "management",
+      "method": "GET",
+      "path": "/management/extractor-executions/{event_id}"
+    },
+    {
+      "operation_id": "management.get_index",
+      "domain": "management",
+      "method": "GET",
+      "path": "/management/indexes/{generation_id}"
+    },
+    {
+      "operation_id": "management.get_release",
+      "domain": "management",
+      "method": "GET",
+      "path": "/management/releases/{release_id}"
+    },
+    {
+      "operation_id": "management.get_transfer",
+      "domain": "management",
+      "method": "GET",
+      "path": "/management/transfers/{transfer_id}"
+    },
+    {
+      "operation_id": "management.list_evaluations",
+      "domain": "management",
+      "method": "GET",
+      "path": "/management/evaluations"
+    },
+    {
+      "operation_id": "management.list_indexes",
+      "domain": "management",
+      "method": "GET",
+      "path": "/management/indexes"
+    },
+    {
+      "operation_id": "management.list_releases",
+      "domain": "management",
+      "method": "GET",
+      "path": "/management/releases"
+    },
+    {
+      "operation_id": "management.list_transfers",
+      "domain": "management",
+      "method": "GET",
+      "path": "/management/transfers"
+    },
+    {
+      "operation_id": "management.operation_receipt",
+      "domain": "management",
+      "method": "GET",
+      "path": "/management/operations/{operation_id}"
+    },
+    {
+      "operation_id": "management.propose_transfer",
+      "domain": "management",
+      "method": "POST",
+      "path": "/management/transfers"
+    },
+    {
+      "operation_id": "management.restore_backup",
+      "domain": "management",
+      "method": "POST",
+      "path": "/management/restores"
+    },
+    {
+      "operation_id": "management.revoke_extractor_certificate",
+      "domain": "management",
+      "method": "POST",
+      "path": "/management/extractor-certificates/{certificate_id}/revoke"
+    },
+    {
+      "operation_id": "management.stage_release",
+      "domain": "management",
+      "method": "POST",
+      "path": "/management/releases"
+    },
+    {
+      "operation_id": "management.verify_index",
+      "domain": "management",
+      "method": "POST",
+      "path": "/management/indexes/{generation_id}/verify"
+    },
+    {
+      "operation_id": "memory.activation",
+      "domain": "memory",
+      "method": "GET",
+      "path": "/memory/entries/{memory_id}/activation"
+    },
+    {
+      "operation_id": "memory.apply_maintenance",
+      "domain": "memory",
+      "method": "POST",
+      "path": "/memory/maintenance/apply"
+    },
+    {
+      "operation_id": "memory.capacity_plan",
+      "domain": "memory",
+      "method": "POST",
+      "path": "/memory/maintenance/capacity-plan"
+    },
+    {
+      "operation_id": "memory.correct",
+      "domain": "memory",
+      "method": "POST",
+      "path": "/memory/entries/{memory_id}/correct"
+    },
+    {
+      "operation_id": "memory.dreaming_plan",
+      "domain": "memory",
+      "method": "POST",
+      "path": "/memory/maintenance/dreaming-plan"
+    },
+    {
+      "operation_id": "memory.feedback",
+      "domain": "memory",
+      "method": "POST",
+      "path": "/memory/entries/{memory_id}/feedback"
+    },
+    {
+      "operation_id": "memory.formation_queue",
+      "domain": "memory",
+      "method": "GET",
+      "path": "/memory/formation/queue"
+    },
+    {
+      "operation_id": "memory.formation_status",
+      "domain": "memory",
+      "method": "GET",
+      "path": "/memory/formation/status"
+    },
+    {
+      "operation_id": "memory.freeze_dreaming_window",
+      "domain": "memory",
+      "method": "POST",
+      "path": "/memory/maintenance/dreaming-windows"
+    },
+    {
+      "operation_id": "memory.get",
+      "domain": "memory",
+      "method": "GET",
+      "path": "/memory/entries/{memory_id}"
+    },
+    {
+      "operation_id": "memory.get_dreaming_window",
+      "domain": "memory",
+      "method": "GET",
+      "path": "/memory/maintenance/dreaming-windows/{window_id}"
+    },
+    {
+      "operation_id": "memory.get_maintenance_plan",
+      "domain": "memory",
+      "method": "GET",
+      "path": "/memory/maintenance/plans/{plan_id}"
+    },
+    {
+      "operation_id": "memory.get_operation_receipt",
+      "domain": "memory",
+      "method": "GET",
+      "path": "/memory/operations/{operation_id}"
+    },
+    {
+      "operation_id": "memory.get_revision",
+      "domain": "memory",
+      "method": "GET",
+      "path": "/memory/entries/{memory_id}/revisions/{revision}"
+    },
+    {
+      "operation_id": "memory.list_dreaming_windows",
+      "domain": "memory",
+      "method": "GET",
+      "path": "/memory/maintenance/dreaming-windows"
+    },
+    {
+      "operation_id": "memory.list_entries",
+      "domain": "memory",
+      "method": "GET",
+      "path": "/memory/entries"
+    },
+    {
+      "operation_id": "memory.list_feedback",
+      "domain": "memory",
+      "method": "GET",
+      "path": "/memory/feedback-events"
+    },
+    {
+      "operation_id": "memory.list_maintenance_plans",
+      "domain": "memory",
+      "method": "GET",
+      "path": "/memory/maintenance/plans"
+    },
+    {
+      "operation_id": "memory.propose",
+      "domain": "memory",
+      "method": "POST",
+      "path": "/memory/entries"
+    },
+    {
+      "operation_id": "memory.recall",
+      "domain": "memory",
+      "method": "POST",
+      "path": "/memory/recall"
+    },
+    {
+      "operation_id": "memory.reinforcement_diagnostic",
+      "domain": "memory",
+      "method": "GET",
+      "path": "/memory/entries/{memory_id}/reinforcement-diagnostic"
+    },
+    {
+      "operation_id": "memory.restore",
+      "domain": "memory",
+      "method": "POST",
+      "path": "/memory/entries/{memory_id}/restore"
+    },
+    {
+      "operation_id": "memory.review",
+      "domain": "memory",
+      "method": "POST",
+      "path": "/memory/entries/{memory_id}/review"
+    },
+    {
+      "operation_id": "memory.revoke",
+      "domain": "memory",
+      "method": "POST",
+      "path": "/memory/entries/{memory_id}/revoke"
+    },
+    {
+      "operation_id": "memory.rewrite_plan",
+      "domain": "memory",
+      "method": "POST",
+      "path": "/memory/maintenance/rewrite-plan"
+    },
+    {
+      "operation_id": "memory.rollback_maintenance",
+      "domain": "memory",
+      "method": "POST",
+      "path": "/memory/maintenance/rollback"
+    },
+    {
+      "operation_id": "memory.trace",
+      "domain": "memory",
+      "method": "GET",
+      "path": "/memory/entries/{memory_id}/trace"
+    },
+    {
+      "operation_id": "memory.transition_feedback",
+      "domain": "memory",
+      "method": "POST",
+      "path": "/memory/feedback-events/{event_id}/transition"
+    }
+  ]
+}

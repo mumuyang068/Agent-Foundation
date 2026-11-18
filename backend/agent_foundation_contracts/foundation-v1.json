@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agent-foundation.local/contracts/foundation-v1.json",
+  "title": "Agent Foundation public contract",
+  "type": "object",
+  "required": ["namespace", "access"],
+  "properties": {
+    "namespace": {"const": "/api/foundation/v1"},
+    "access": {
+      "type": "object",
+      "required": ["grant", "session", "authorization"],
+      "properties": {
+        "grant": {
+          "type": "object",
+          "required": ["principal_id", "scope", "domains", "actions"],
+          "properties": {
+            "principal_id": {"type": "string", "minLength": 1},
+            "scope": {"$ref": "#/$defs/scope"},
+            "domains": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/domain"}},
+            "actions": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+          }
+        },
+        "session": {
+          "type": "object",
+          "required": ["principal_id", "principal_kind", "grant_id"],
+          "properties": {
+            "principal_id": {"type": "string", "minLength": 1},
+            "principal_kind": {"enum": ["user", "service", "agent", "operator"]},
+            "grant_id": {"type": "string", "minLength": 1},
+            "ttl_seconds": {"type": "integer", "minimum": 1, "maximum": 86400}
+          }
+        },
+        "authorization": {
+          "type": "object",
+          "required": ["domain", "action", "policy_id", "policy_version"],
+          "properties": {
+            "domain": {"$ref": "#/$defs/domain"},
+            "action": {"type": "string", "minLength": 1},
+            "policy_id": {"type": "string", "minLength": 1},
+            "policy_version": {"type": "integer", "minimum": 1}
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "domain": {
+      "enum": ["memory", "evidence", "graph", "context", "jobs", "management", "applications"]
+    },
+    "scope": {
+      "type": "object",
+      "required": ["tenant_id", "space_id"],
+      "properties": {
+        "tenant_id": {"type": "string", "minLength": 1},
+        "space_id": {"type": "string", "minLength": 1},
+        "project_id": {"type": ["string", "null"]}
+      }
+    }
+  }
+}

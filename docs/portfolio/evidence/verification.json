@@ -1,0 +1,43 @@
+{
+  "recorded_on": "2026-11-18",
+  "scope": "Portfolio demonstration, not PL-17 completion",
+  "service_version": "1.0.0a32",
+  "service_wheel_sha256": "a21d674f6007ecd5660c6bc829a2f98fa078dd0307ba6e8770659982ee19fe42",
+  "python_client_version": "1.0.0a4",
+  "client_wheel_sha256": "0235c3b71029be96a4455e66be544d6f5e217fd496fafb169f9b80999ea5536f",
+  "service_contract_files_installed_byte_equal": 105,
+  "core_regressions": {
+    "passed": 44,
+    "failed": 0,
+    "skipped": 0
+  },
+  "demo": {
+    "transport": "HTTP",
+    "data": "synthetic",
+    "storage": "SQLite control and graph write in separate files",
+    "review_denied": {
+      "status": 403,
+      "code": "grant_scope_denied"
+    },
+    "applied": "applied",
+    "idempotent_replay_equal": true,
+    "visible_before_revoke": 1,
+    "visible_after_revoke": 0
+  },
+  "screenshot_files": {
+    "foundation-api.jpg": "9e4c349d8a0b7a2282e942f5b619c5527a77cd17b36d0b949268e5dee1a99f9b",
+    "tracewise-evidence-graph.png": "87dd9fdec43f13b15ff82b7cc9dcecb773534fee8740d66ed70d27afb6caa163"
+  },
+  "runtime": {
+    "fastapi": "0.163.1",
+    "pydantic": "2.14.3",
+    "uvicorn": "0.54.0",
+    "httpx": "0.28.1"
+  },
+  "not_covered": [
+    "PostgreSQL / Neo4j / Qdrant live acceptance",
+    "Complete adopter browser workflows for this candidate",
+    "All historical behaviors",
+    "Public atlas browser visual review"
+  ]
+}

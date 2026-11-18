@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agent-foundation.local/contracts/foundation-v1-evidence.json",
+  "title": "Agent Foundation Evidence contract",
+  "type": "object",
+  "required": ["namespace", "operations"],
+  "properties": {
+    "namespace": {"const": "/api/foundation/v1/evidence"},
+    "operations": {
+      "type": "object",
+      "required": [
+        "admit",
+        "exact-read",
+        "list-revisions",
+        "operation-receipt",
+        "retrieval-status",
+        "retrieval-watermark",
+        "search",
+        "revoke",
+        "revalidate",
+        "support"
+      ],
+      "properties": {
+        "admit": {"const": "POST /revisions"},
+        "exact-read": {"const": "GET /revisions/{revision_id}"},
+        "list-revisions": {"const": "GET /revisions"},
+        "operation-receipt": {"const": "GET /operations/{operation_id}"},
+        "retrieval-status": {"const": "GET /retrieval/status"},
+        "retrieval-watermark": {"const": "GET /authority/watermark"},
+        "search": {"const": "POST /search"},
+        "revoke": {"const": "POST /revisions/{revision_id}/revoke"},
+        "revalidate": {"const": "POST /revisions/{revision_id}/revalidate"},
+        "support": {"const": "POST /supports"}
+      }
+    },
+    "selection": {
+      "type": "object",
+      "properties": {
+        "source_ids": {"type": "array", "items": {"type": "string"}},
+        "revision_ids": {"type": "array", "items": {"type": "string"}},
+        "no_match_behavior": {"const": "empty"}
+      }
+    }
+  }
+}

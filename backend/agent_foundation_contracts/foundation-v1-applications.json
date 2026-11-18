@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agent-foundation.local/contracts/foundation-v1-applications.json",
+  "title": "Agent Foundation application turn contract",
+  "type": "object",
+  "required": ["namespace", "operations"],
+  "properties": {
+    "namespace": {"const": "/api/foundation/v1/applications"},
+    "operations": {"type": "object", "required": ["prepare", "get", "observe", "outcome"], "properties": {
+      "prepare": {"const": "POST /turns"}, "get": {"const": "GET /turns/{turn_id}"},
+      "observe": {"const": "POST /turns/{turn_id}/observations"},
+      "outcome": {"const": "POST /turns/{turn_id}/outcomes"}
+    }}
+  }
+}

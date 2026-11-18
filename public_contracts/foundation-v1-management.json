@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agent-foundation.local/contracts/foundation-v1-management.json",
+  "title": "Agent Foundation management contract",
+  "type": "object",
+  "required": ["namespace", "operations"],
+  "properties": {
+    "namespace": {"const": "/api/foundation/v1/management"},
+    "operations": {
+      "type": "object",
+      "required": [
+        "diagnostics", "operation-receipt", "stage-release", "get-release", "list-releases",
+        "get-active-release", "approve-release", "activate-release", "begin-index",
+        "get-index", "list-indexes", "get-active-index", "verify-index", "activate-index",
+        "record-evaluation", "get-evaluation", "list-evaluations", "propose-transfer", "get-transfer", "list-transfers", "approve-transfer",
+        "execute-transfer", "backup", "restore", "certify-extractor",
+        "get-extractor-certificate", "revoke-extractor-certificate",
+        "execute-extractor", "get-extractor-execution"
+      ],
+      "properties": {
+        "diagnostics": {"const": "GET /diagnostics"},
+        "operation-receipt": {"const": "GET /operations/{operation_id}"},
+        "stage-release": {"const": "POST /releases"},
+        "get-release": {"const": "GET /releases/{release_id}"},
+        "list-releases": {"const": "GET /releases"},
+        "get-active-release": {"const": "GET /releases/active"},
+        "approve-release": {"const": "POST /releases/{release_id}/approve"},
+        "activate-release": {"const": "POST /releases/{release_id}/activate"},
+        "begin-index": {"const": "POST /indexes"},
+        "get-index": {"const": "GET /indexes/{generation_id}"},
+        "list-indexes": {"const": "GET /indexes"},
+        "get-active-index": {"const": "GET /indexes/active/{domain}"},
+        "verify-index": {"const": "POST /indexes/{generation_id}/verify"},
+        "activate-index": {"const": "POST /indexes/{generation_id}/activate"},
+        "record-evaluation": {"const": "POST /evaluations"},
+        "get-evaluation": {"const": "GET /evaluations/{evaluation_id}"},
+        "list-evaluations": {"const": "GET /evaluations"},
+        "propose-transfer": {"const": "POST /transfers"},
+        "get-transfer": {"const": "GET /transfers/{transfer_id}"},
+        "list-transfers": {"const": "GET /transfers"},
+        "approve-transfer": {"const": "POST /transfers/{transfer_id}/approve"},
+        "execute-transfer": {"const": "POST /transfers/{transfer_id}/execute"},
+        "backup": {"const": "POST /backups"},
+        "restore": {"const": "POST /restores"},
+        "certify-extractor": {"const": "POST /extractors/{release_id}/certifications"},
+        "get-extractor-certificate": {"const": "GET /extractor-certificates/{certificate_id}"},
+        "revoke-extractor-certificate": {"const": "POST /extractor-certificates/{certificate_id}/revoke"},
+        "execute-extractor": {"const": "POST /extractors/{release_id}/execute"},
+        "get-extractor-execution": {"const": "GET /extractor-executions/{event_id}"}
+      }
+    }
+  }
+}

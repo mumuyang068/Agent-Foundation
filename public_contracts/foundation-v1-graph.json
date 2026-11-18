@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agent-foundation.local/contracts/foundation-v1-graph.json",
+  "title": "Agent Foundation Graph contract",
+  "type": "object",
+  "required": ["namespace", "operations"],
+  "properties": {
+    "namespace": {"const": "/api/foundation/v1/graph"},
+    "operations": {
+      "type": "object",
+      "required": [
+        "propose", "get-proposal", "list-proposals", "review", "apply", "get-node",
+        "list-nodes", "get-node-revision", "get-edge", "list-edges", "get-edge-revision", "neighborhood", "query",
+        "publish-schema", "get-schema", "list-schemas", "entity-normalization", "temporal-relation",
+        "temporal-query", "temporal-invalidation", "temporal-supersession",
+        "relation-reinforcement", "relation-evolution", "community-topology",
+        "operation-receipt"
+      ],
+      "properties": {
+        "propose": {"const": "POST /proposals"},
+        "get-proposal": {"const": "GET /proposals/{proposal_id}"},
+        "list-proposals": {"const": "GET /proposals"},
+        "review": {"const": "POST /proposals/{proposal_id}/review"},
+        "apply": {"const": "POST /proposals/{proposal_id}/apply"},
+        "get-node": {"const": "GET /nodes/{node_id}"},
+        "list-nodes": {"const": "GET /nodes"},
+        "get-node-revision": {"const": "GET /nodes/{node_id}/revisions/{revision}"},
+        "get-edge": {"const": "GET /edges/{edge_id}"},
+        "list-edges": {"const": "GET /edges"},
+        "get-edge-revision": {"const": "GET /edges/{edge_id}/revisions/{revision}"},
+        "neighborhood": {"const": "GET /nodes/{node_id}/neighborhood"},
+        "query": {"const": "POST /query"},
+        "publish-schema": {"const": "POST /schemas"},
+        "get-schema": {"const": "GET /schemas/{schema_id}/versions/{version}"},
+        "list-schemas": {"const": "GET /schemas"},
+        "entity-normalization": {"const": "POST /proposals/entity-normalization"},
+        "temporal-relation": {"const": "POST /proposals/temporal-relation"},
+        "temporal-query": {"const": "POST /temporal/query"},
+        "temporal-invalidation": {"const": "POST /temporal/{edge_id}/invalidate"},
+        "temporal-supersession": {"const": "POST /temporal/{edge_id}/supersede"},
+        "relation-reinforcement": {"const": "POST /proposals/relation-reinforcement"},
+        "relation-evolution": {"const": "POST /proposals/relation-evolution"},
+        "community-topology": {"const": "POST /proposals/community-topology"},
+        "operation-receipt": {"const": "GET /operations/{operation_id}"}
+      }
+    }
+  }
+}

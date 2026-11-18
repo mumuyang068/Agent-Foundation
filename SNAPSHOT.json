@@ -1,0 +1,687 @@
+{
+  "schema_version": "agent-foundation.portfolio-snapshot.v1",
+  "service_version": "1.0.0a32",
+  "scope": "Service, contracts, both SDKs, public domain tests, demo and portable atlas; no private execution archive or Git history",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "sha256": "f9e805bd1f4c2a7490a655e925ee0954fa3a388bb7e686d7d12cf4a596854b68"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "90441cdd54c1ef3fa0761ad665cb3ba244636958f5f8faf6455d7df66f29a2ba"
+    },
+    {
+      "path": "README.md",
+      "sha256": "832e89de7737a92f9014e02c457fdbdd24d0df9a022bcecf4e39b4c3799b3152"
+    },
+    {
+      "path": "backend/agent_foundation/__init__.py",
+      "sha256": "63f6ab3131afda7c43fee52ddda20ce2b35453f4002af34b58ba58bccf5e79b2"
+    },
+    {
+      "path": "backend/agent_foundation/adapters/__init__.py",
+      "sha256": "7f1cca7024f9293fbc3504d987ffb3ed9b30581d5abea23c8c476ce4362fc8d1"
+    },
+    {
+      "path": "backend/agent_foundation/adapters/inbound/__init__.py",
+      "sha256": "93e67693d7eae20b6aceffbdf184f2ee4a33eef82f0ea88d9de490cce2549e17"
+    },
+    {
+      "path": "backend/agent_foundation/adapters/inbound/access_http.py",
+      "sha256": "fe53411d811ba380d95c62c6f8306f20b47a81a749bdf3b44d2c9d87d207f4f6"
+    },
+    {
+      "path": "backend/agent_foundation/adapters/inbound/applications_http.py",
+      "sha256": "7dbed4c628af795215a2bb7c675da98cf9d2e696463a7648cbbdcfef36aeef72"
+    },
+    {
+      "path": "backend/agent_foundation/adapters/inbound/context_http.py",
+      "sha256": "f3a936d3a6bfbc8e6b5fefa7c090ae61abdeb29b4815f324539d3080357f868f"
+    },
+    {
+      "path": "backend/agent_foundation/adapters/inbound/evidence_http.py",
+      "sha256": "1c7ceb94f5492731c82f2bbe8b9133bf4db55e2301268d046231fac890987ddc"
+    },
+    {
+      "path": "backend/agent_foundation/adapters/inbound/graph_http.py",
+      "sha256": "7fcebd2a0cd9a34be00688228f2152bf743de22e2c07c96ad090dcbad6b125ae"
+    },
+    {
+      "path": "backend/agent_foundation/adapters/inbound/jobs_http.py",
+      "sha256": "46b1dd8735a46b6a3cd7a349700c9955ce660e865e145d90afaea392d46c36eb"
+    },
+    {
+      "path": "backend/agent_foundation/adapters/inbound/local_v1.py",
+      "sha256": "9db27394b701d8b6959827475533e3f84f443964c61fc780ff8a17dc69376565"
+    },
+    {
+      "path": "backend/agent_foundation/adapters/inbound/management_http.py",
+      "sha256": "5142f37f053373b88f65d04dece366024b939f4efa61130d31847a1415d92f3b"
+    },
+    {
+      "path": "backend/agent_foundation/adapters/inbound/mcp_v1.py",
+      "sha256": "251b147c659d107e085dea9ef796e6e7ae40d1e9e62988bd5623e5812e9660a9"
+    },
+    {
+      "path": "backend/agent_foundation/adapters/inbound/memory_http.py",
+      "sha256": "988dab80add3439df4e7038db813974e9b8e20a62f6f62ee9b0427a9e02f5a4b"
+    },
+    {
+      "path": "backend/agent_foundation/adapters/inbound/routes_v1.py",
+      "sha256": "b5bff6836aed9635a4f2c34cfb608a2ff3b2ef9aa8b567ccc783d53ae9d682b4"
+    },
+    {
+      "path": "backend/agent_foundation/adapters/outbound/__init__.py",
+      "sha256": "d96ff5f57725b877b466db4091b28f25432da5b11838faa5c1fb686c7c7628f5"
+    },
+    {
+      "path": "backend/agent_foundation/adapters/outbound/access_state.py",
+      "sha256": "aa5ef81c501526562ff87b820a8f22d4fc185dff1c5937fb753f03b110123bd8"
+    },
+    {
+      "path": "backend/agent_foundation/adapters/outbound/context_sources_v2.py",
+      "sha256": "ca0b502e9a81f16bef703d854a75fcd6e83c40fbb81f431dbd0b353a47a0fe74"
+    },
+    {
+      "path": "backend/agent_foundation/adapters/outbound/extraction_sinks_v2.py",
+      "sha256": "acb55a28b468aae40719d353a332ece4c9e3f43a283fb173ade65d8ec27b865e"
+    },
+    {
+      "path": "backend/agent_foundation/adapters/outbound/filesystem_management_effects_v2.py",
+      "sha256": "bf743e8813fd0a3cb1848db7fd99ceabeb0bb175d1d807f7482f41421eb01391"
+    },
+    {
+      "path": "backend/agent_foundation/adapters/outbound/memory_links_v2.py",
+      "sha256": "9fa6a9506691b6b17c1017070cbae2ddd23837fc6c2ce0e0615dcf94df848a53"
+    },
+    {
+      "path": "backend/agent_foundation/adapters/outbound/neo4j_graph_v2.py",
+      "sha256": "86f217ca37714cc932850d2f70a203374aa8ffbc1731a3b243f39b6cdc514913"
+    },
+    {
+      "path": "backend/agent_foundation/adapters/outbound/postgres_evidence_v2.py",
+      "sha256": "84d89de1e84f1569b1e72deaa937b7079b70660c08a1001aeabd6f9b02cb1620"
+    },
+    {
+      "path": "backend/agent_foundation/adapters/outbound/postgres_graph_control_v2.py",
+      "sha256": "62816ed85e96ea074184746ef5a4262087d9a48fa339bf38142ac889a72f53a7"
+    },
+    {
+      "path": "backend/agent_foundation/adapters/outbound/postgres_memory_v2.py",
+      "sha256": "988dc8435a334c5c5b5e36814071d4caf447b6eee5d0e8a8879a5d0c400b7e06"
+    },
+    {
+      "path": "backend/agent_foundation/adapters/outbound/projected_candidates_v2.py",
+      "sha256": "b7d9feaf17ce4f8fa3c5411a4a6959c4523fbf53fdb11bc75c7f04671d4ab641"
+    },
+    {
+      "path": "backend/agent_foundation/adapters/outbound/projection_v2.py",
+      "sha256": "f49aef30de9c77e7c13781efbbbd3de56b23aa6e50d15125a77a7b051a780912"
+    },
+    {
+      "path": "backend/agent_foundation/adapters/outbound/relational_memory_v2.py",
+      "sha256": "1e5fdbea72626c31c9462a4b8ba6f056931aebf132bc15eb974dfcb2c827927f"
+    },
+    {
+      "path": "backend/agent_foundation/adapters/outbound/sqlite_application_turns_v2.py",
+      "sha256": "4a836ed0e6cc62bfffc68498a037c4ece35c038bf4b22212019899434288b99e"
+    },
+    {
+      "path": "backend/agent_foundation/adapters/outbound/sqlite_context_v2.py",
+      "sha256": "1bb452b7f4a481f9f99eeb6b72c31954899079d99fc224f1bcd3ce4f0086c412"
+    },
+    {
+      "path": "backend/agent_foundation/adapters/outbound/sqlite_evidence_v2.py",
+      "sha256": "384f881932f5e1caae1ecd5b353db9dc0a7697be9bf601283b2d270f295fa077"
+    },
+    {
+      "path": "backend/agent_foundation/adapters/outbound/sqlite_graph_v2.py",
+      "sha256": "db0af9077a405b3da7101ad18059f8759a925c338493174d1f7fa406414f87c6"
+    },
+    {
+      "path": "backend/agent_foundation/adapters/outbound/sqlite_jobs_v2.py",
+      "sha256": "da5b851138e26b03c24a68715d753ebc9a2f433c058cc5807501b9acf0559a43"
+    },
+    {
+      "path": "backend/agent_foundation/adapters/outbound/sqlite_management_v2.py",
+      "sha256": "39c2cb475a96f9cb22810c58da613fd4bb1e6e19812094fda4b63209babd19a7"
+    },
+    {
+      "path": "backend/agent_foundation/adapters/outbound/sqlite_memory_v2.py",
+      "sha256": "531da07d7c16689a9f87b99ae9dff52aee885de80ca924de8b7900243e1dcbf6"
+    },
+    {
+      "path": "backend/agent_foundation/algorithms/__init__.py",
+      "sha256": "50ccbf5d38f3e6e0f3c1019efae7ef81f103d097396e51ae7244e674f75041a9"
+    },
+    {
+      "path": "backend/agent_foundation/algorithms/context_v2.py",
+      "sha256": "b0803bf2a08bad0dd81dcd294d7f5f232f945916fc371649e37407bc3fa2f6db"
+    },
+    {
+      "path": "backend/agent_foundation/algorithms/evidence_v2.py",
+      "sha256": "57bfad8233888a3c654140f5a59ac629ef231783cae94bb3788414caefe4438d"
+    },
+    {
+      "path": "backend/agent_foundation/algorithms/graph_v2.py",
+      "sha256": "ddfb854a529b8635d6af69febdfb03fb893ef188c12cea89bde97fdaffdd426d"
+    },
+    {
+      "path": "backend/agent_foundation/algorithms/lexical_v2.py",
+      "sha256": "f5e5d60f29d00ec86da550d19bcba65ca72bfd55e5157c8f48ee389e123d18da"
+    },
+    {
+      "path": "backend/agent_foundation/algorithms/memory_v2.py",
+      "sha256": "2e69d40033ec112c48992dc565917230c099cc9f11b4394252b85e8b6755617c"
+    },
+    {
+      "path": "backend/agent_foundation/algorithms/vector_v2.py",
+      "sha256": "a7cd4304516959e6f493d089766d383a209838cc006b2cc52bf9c26fe52d20cb"
+    },
+    {
+      "path": "backend/agent_foundation/execution/__init__.py",
+      "sha256": "1a4b75e69e4f1630521c84b1046bd122cf17bd907b28bca0a90c96ac7da81076"
+    },
+    {
+      "path": "backend/agent_foundation/execution/catalog.py",
+      "sha256": "f482475c251df9fec1fc7c3dc25b0a44fb39d4a6752ff8c16cf2bf0770a1c635"
+    },
+    {
+      "path": "backend/agent_foundation/execution/contracts.py",
+      "sha256": "1e27d14443bd61bd54b5ab139cf5302a5a3f4bd08b07064cd07a50843b80681e"
+    },
+    {
+      "path": "backend/agent_foundation/execution/extractors.py",
+      "sha256": "c504306c5cb410175532623f43ae1d27752ec2325bed53e4cef4f1666ffa665d"
+    },
+    {
+      "path": "backend/agent_foundation/execution/ports.py",
+      "sha256": "9d5d9950354e3e667b0f2cc551b0e6f48fce010f365482701e9ccaaf582d0c84"
+    },
+    {
+      "path": "backend/agent_foundation/host/__init__.py",
+      "sha256": "cbee77502f1cae1cc68bd022c34534f0af9ae58fcadf6a116edf27e82cca2e8f"
+    },
+    {
+      "path": "backend/agent_foundation/host/assembly.py",
+      "sha256": "ab8244b1f35c5d18f5021397ac3bf46f63276c9047d11ef9e04364e172232090"
+    },
+    {
+      "path": "backend/agent_foundation/host/backup_v2.py",
+      "sha256": "fb27704f0d7ee56270a49f4ae51d368b0b8f47eb9f14c016a05c14c036a46c39"
+    },
+    {
+      "path": "backend/agent_foundation/host/configuration.py",
+      "sha256": "f0a369758f769ecc5fcd1a1866c93489213775403fbbfcb4367720c642be5c4b"
+    },
+    {
+      "path": "backend/agent_foundation/host/minimal.py",
+      "sha256": "d4b6e562bd4570ac7924f1bbc34abf1660ea0905bb86b9e6da3401bd97081525"
+    },
+    {
+      "path": "backend/agent_foundation/host/projections_v2.py",
+      "sha256": "fc26e7db4825f114ad232aede4ecef918dffa28bf00496e0162446db1feb4394"
+    },
+    {
+      "path": "backend/agent_foundation/host/service_v2.py",
+      "sha256": "5cfc02a032cdfc5c6ffd741b83c6019c108ddfe1017fba25f8c82424d2443b04"
+    },
+    {
+      "path": "backend/agent_foundation/kernel/__init__.py",
+      "sha256": "f4f28aac013e9d78a27d75bde69ee1f23e98037e91721839c668696e4ba41a42"
+    },
+    {
+      "path": "backend/agent_foundation/kernel/errors.py",
+      "sha256": "03a9f12a64044668c39fb814f4597134b83f583d139e6d0ac85705301410c5ee"
+    },
+    {
+      "path": "backend/agent_foundation/kernel/ports.py",
+      "sha256": "47a1a9a98228c826d69f2b1ab32fef84f3383f0ae0c2303139a242986e81fcea"
+    },
+    {
+      "path": "backend/agent_foundation/kernel/primitives.py",
+      "sha256": "4af1dc41f5b16ee827649e874992e5b1cb011a2c30808d63d60bdd94884c4606"
+    },
+    {
+      "path": "backend/agent_foundation/modules/__init__.py",
+      "sha256": "a60dcd5a90408a6b6f470a17d568091c140641373469efcbc4db46e93383dc15"
+    },
+    {
+      "path": "backend/agent_foundation/modules/access/__init__.py",
+      "sha256": "de89d38483c131fec1220f93965962a5c3b96077649d00a0d79510910353d36a"
+    },
+    {
+      "path": "backend/agent_foundation/modules/access/application.py",
+      "sha256": "fa68ad25895e7b374a886c6fae9b383b867058ae2f250a2aa81e7ca4a53fc53a"
+    },
+    {
+      "path": "backend/agent_foundation/modules/access/contracts.py",
+      "sha256": "891b7f4aee971662439c35a95f276cf171ad43441934fdd20e18a5b15997324e"
+    },
+    {
+      "path": "backend/agent_foundation/modules/access/domain.py",
+      "sha256": "bc1fb9b6a6f96baaee8e464d09486a3fb9606ff4fabb1ad3b73c10cc91ddb6be"
+    },
+    {
+      "path": "backend/agent_foundation/modules/access/ports.py",
+      "sha256": "c1c664e4f8fb9e30c00ad1dc60e17250cc2a9533ae8292e4f655ccb6031acd2d"
+    },
+    {
+      "path": "backend/agent_foundation/modules/applications/__init__.py",
+      "sha256": "057fd08f174af9159a57dfb7803328fd6097b7a11e20e92dd8e8000e6c6d41ba"
+    },
+    {
+      "path": "backend/agent_foundation/modules/applications/contracts.py",
+      "sha256": "62eb0f997f133284c5b318aabb2dc92c0488356637b8aceb29748750dabc5b20"
+    },
+    {
+      "path": "backend/agent_foundation/modules/applications/ports.py",
+      "sha256": "c5287edaf6b6ced2b2bd5d941f803788f2f77d066e163fd9e301d99dbf56940d"
+    },
+    {
+      "path": "backend/agent_foundation/modules/context/__init__.py",
+      "sha256": "398a79367453fb40f846b703ea16160f6207bb323c5e487a27d36e1e9a216c9d"
+    },
+    {
+      "path": "backend/agent_foundation/modules/context/application.py",
+      "sha256": "e334278e9ce15815b097faebc2a9ba6f79050a835742a73d921f09dc68fceb83"
+    },
+    {
+      "path": "backend/agent_foundation/modules/context/contracts.py",
+      "sha256": "3add41fddb0d2d6557fb9e90a107682bf635dadb598255f7d43d1376afa7db44"
+    },
+    {
+      "path": "backend/agent_foundation/modules/context/ports.py",
+      "sha256": "8b8e69cadc61d4d4b4fe41635a9132c044b4582b2918f5d94d6abf4abc403772"
+    },
+    {
+      "path": "backend/agent_foundation/modules/evidence/__init__.py",
+      "sha256": "8ac0ca6b24c7aed10ec9b00609ec421f7eaa33f7ac7e6f4091ac4ba135055e9f"
+    },
+    {
+      "path": "backend/agent_foundation/modules/evidence/application.py",
+      "sha256": "0938ddfbdc2024bc786373a2076407c58d23383a814cf148cd3fcb6f1c0536eb"
+    },
+    {
+      "path": "backend/agent_foundation/modules/evidence/contracts.py",
+      "sha256": "84d18d4037b6772f679dbfed233aecf902c2549e94d2ae4d0d63f958d34367a6"
+    },
+    {
+      "path": "backend/agent_foundation/modules/evidence/ports.py",
+      "sha256": "7cc92124610dca73c60f92fbf47a2a04fb2835fde4abf891ff8299c8575771ad"
+    },
+    {
+      "path": "backend/agent_foundation/modules/graph/__init__.py",
+      "sha256": "ea270a22ed73d858caa82fff3aed59910923ce6e801fcd4f35a4ce5bc49503b9"
+    },
+    {
+      "path": "backend/agent_foundation/modules/graph/application.py",
+      "sha256": "fa1f89aa1ede7f91b18e9b24878116c26e0303f787cee32a3f82a3b4c5f1652d"
+    },
+    {
+      "path": "backend/agent_foundation/modules/graph/contracts.py",
+      "sha256": "d8ac2344e798cfca996f4c17943060d452c2a6795dd811c14852ceda5c0ee81b"
+    },
+    {
+      "path": "backend/agent_foundation/modules/graph/domain.py",
+      "sha256": "3081bfcc95794b6753e93228f81e56ce7170e1e841bbd97b3ce1470f2615a600"
+    },
+    {
+      "path": "backend/agent_foundation/modules/graph/ports.py",
+      "sha256": "72347e2da04b1c9bb97e7c6ea4a374c58e23bd0dbb2ed893ec309527376167a0"
+    },
+    {
+      "path": "backend/agent_foundation/modules/jobs/__init__.py",
+      "sha256": "de22b2432c864ec89f53510009d1702f1a503a311ae5b1e67ddaf07f2c9f0b93"
+    },
+    {
+      "path": "backend/agent_foundation/modules/jobs/application.py",
+      "sha256": "daaf716bb1a962abe4dc6f9bafb66276825e2904cf4fffa467f60f3277d7804c"
+    },
+    {
+      "path": "backend/agent_foundation/modules/jobs/contracts.py",
+      "sha256": "2b6cd9c87081938f93786b23e0a043463ef086759c5c317cf7a49e248e4fc89c"
+    },
+    {
+      "path": "backend/agent_foundation/modules/jobs/ports.py",
+      "sha256": "a2e6980484510cb3181d471f88f51ced10a2e9b5ac7a710d4c8a323ffb0aad4b"
+    },
+    {
+      "path": "backend/agent_foundation/modules/management/__init__.py",
+      "sha256": "ed9eb9c1c4fe2b8e4e214af78ae3300036cff2c95c332f579c2c2fb2c0358735"
+    },
+    {
+      "path": "backend/agent_foundation/modules/management/application.py",
+      "sha256": "7ba11892a0280eafa26ec6e66452fcd97d8d4f3ed7361a61249db9cd92915d26"
+    },
+    {
+      "path": "backend/agent_foundation/modules/management/contracts.py",
+      "sha256": "0669e21a4d9a695e50046978e61d31e3e5ab4324262221fde052bff637a6a532"
+    },
+    {
+      "path": "backend/agent_foundation/modules/management/ports.py",
+      "sha256": "321a365c381f70695c645ef9d3ea24252b022c638c1bcd1b1fcfb4f6b0656a55"
+    },
+    {
+      "path": "backend/agent_foundation/modules/memory/__init__.py",
+      "sha256": "610641839c2c03f939c847fbbd73c96b8a72a6d7b041d57fdb01cf33aebd0243"
+    },
+    {
+      "path": "backend/agent_foundation/modules/memory/application.py",
+      "sha256": "7067770f6997ecb90e5990d61fa62046bf1f42bfac31238a1a4fe1256a82bf69"
+    },
+    {
+      "path": "backend/agent_foundation/modules/memory/contracts.py",
+      "sha256": "1988f83f85e4eaeb826b9da44858a6f454c8c8a704068a278f0324aa2c3882e6"
+    },
+    {
+      "path": "backend/agent_foundation/modules/memory/ports.py",
+      "sha256": "b5fcd788d9aafb4c8379e390f8b8fee0f8d2f26557d8e8bc0855493b0bb14ad9"
+    },
+    {
+      "path": "backend/agent_foundation/workflows/__init__.py",
+      "sha256": "07f0d06c3d22035ca3d81461bff61cdfb32b32e392aa17d0e9b2337bad7ea200"
+    },
+    {
+      "path": "backend/agent_foundation/workflows/agent_turns.py",
+      "sha256": "8e1aa36230c1bc17652b30b94cd46f5a82d257d5a8adc96b339371aed8be23e5"
+    },
+    {
+      "path": "backend/agent_foundation/workflows/domain_jobs.py",
+      "sha256": "26814a225a00e8a26bc267c9cdab6d1641d4e5366f5c00ed41f1ff3138bbffc3"
+    },
+    {
+      "path": "backend/agent_foundation_contracts/__init__.py",
+      "sha256": "222309a5f7bca9a95f69096b7145fc42f7bc406b2ef4861a7c2a471101f1b3e3"
+    },
+    {
+      "path": "backend/agent_foundation_contracts/foundation-v1-applications.json",
+      "sha256": "c4802263e22d78cf67be7c212a6691a658030d70acc1901bd6331bd6e1b97a2b"
+    },
+    {
+      "path": "backend/agent_foundation_contracts/foundation-v1-context.json",
+      "sha256": "d59a9930bad94fb873915aa4e14c35039ff25bf3c954514e731fbc178e6a2f19"
+    },
+    {
+      "path": "backend/agent_foundation_contracts/foundation-v1-evidence.json",
+      "sha256": "b484ec095e0f482d916b1db7ab12db3bfcd30424b18feaade9ee84a082610702"
+    },
+    {
+      "path": "backend/agent_foundation_contracts/foundation-v1-graph.json",
+      "sha256": "50b38c2b89def94eff6462c1c0e58461c36056170ee31491f1f3ca9dd657914c"
+    },
+    {
+      "path": "backend/agent_foundation_contracts/foundation-v1-jobs.json",
+      "sha256": "ce5fc20386a5729de4e68b5529d7435dc9bd9aa133e02c56f6535b5fb1cab1ce"
+    },
+    {
+      "path": "backend/agent_foundation_contracts/foundation-v1-management.json",
+      "sha256": "39c69b94dcdd6c597b2ec0eb9d1edda41770c75659d885bbf76154f86df4e513"
+    },
+    {
+      "path": "backend/agent_foundation_contracts/foundation-v1-memory.json",
+      "sha256": "f4f37b3593a8edd75c4d3c065aec37268d3c1bcccea4148bf0a3f13ffc576576"
+    },
+    {
+      "path": "backend/agent_foundation_contracts/foundation-v1-routes.json",
+      "sha256": "064417d8db88e5db61b350b410afaedf93b52fd53612d206c676952a1452a480"
+    },
+    {
+      "path": "backend/agent_foundation_contracts/foundation-v1.json",
+      "sha256": "5147268fbeeb3c9f5f61d3742e8019abd9747d2455d1c1b4681a0e85c0fd99a5"
+    },
+    {
+      "path": "backend/agent_foundation_contracts/legacy-behavior-workflow-map-v1.json",
+      "sha256": "22c6607f30e88ba5af1cb84dd56b2f1582ee040d9469720e1f657fbba35d35b5"
+    },
+    {
+      "path": "backend/tests/test_architecture_pl01.py",
+      "sha256": "e605f049fde4949fb79d8db1bb308a5d89893d41172f36e8e0864b3de5725f25"
+    },
+    {
+      "path": "backend/tests/test_architecture_pl02_evidence.py",
+      "sha256": "c8634f330fb96374f1902b8eb3c9c21f46d604c93ae1c77b17b720752f5c92d4"
+    },
+    {
+      "path": "backend/tests/test_architecture_pl03_memory.py",
+      "sha256": "cdf44c79792f09f62dce28b38020c948bdb9fc4644003802df8f4168328b1f98"
+    },
+    {
+      "path": "backend/tests/test_architecture_pl04_graph.py",
+      "sha256": "46119e5eea3a7cf7d0199878bf44c7a95715932ccc13bfc898c2468d1c306ccb"
+    },
+    {
+      "path": "backend/tests/test_architecture_pl05_context.py",
+      "sha256": "7a43e22a6fd280a9f7e788b6e9e9658d0d56ba51d2448d0d9051057284bd6eaf"
+    },
+    {
+      "path": "backend/tests/test_architecture_pl06_jobs.py",
+      "sha256": "c9a2ab13874384d3e9337480bedecc718d2863d29a12c3305f69dd94d9c10a87"
+    },
+    {
+      "path": "backend/tests/test_architecture_pl07_management.py",
+      "sha256": "3103eee6f18f8e49d5911f6c2b6baf7ed012e14b161bf6a17f2182392b991d8c"
+    },
+    {
+      "path": "backend/tests/test_architecture_pl09_assembly_matrix.py",
+      "sha256": "e596753efaca41e172ae8fd389dd3e76ad26e1b1bd19265c07baa5fea52ac554"
+    },
+    {
+      "path": "backend/tests/test_architecture_pl09_storage_adapters.py",
+      "sha256": "0a8e67e73ece7c3f53b6f1367906e7277aaeabe65c8225ac99aef7126778ac98"
+    },
+    {
+      "path": "backend/tests/test_architecture_pl14_extractors.py",
+      "sha256": "8ecaa194e3706df762ea49712c436a625c6f458cd1d168c00949bacdf9241569"
+    },
+    {
+      "path": "backend/tests/test_architecture_pl14_graph_authority.py",
+      "sha256": "05fe0b0f866e5592bd6b028de2ded746b84a7b6573c999e038c7c5992a7eba58"
+    },
+    {
+      "path": "backend/tests/test_architecture_pl14_graph_temporal.py",
+      "sha256": "f6be34b3d49162f02481dafcd6c8f1a9e04598282bcfa8e0b94adb5f9bcd6e8b"
+    },
+    {
+      "path": "backend/tests/test_architecture_pl14_postgres_authorities.py",
+      "sha256": "a65ca72b517ac6d63b7d82a242f9c507ebae0a5642acb6ece4ee069248bd40a2"
+    },
+    {
+      "path": "docs/.nojekyll",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "docs/index.html",
+      "sha256": "f91751aab53d0f39a2e2a90916113d9b889dae944f9861ade6f1d7b83b2249b3"
+    },
+    {
+      "path": "docs/portfolio/ARCHITECTURE.md",
+      "sha256": "64d1242f9e4242ac21594f1da3bf0741537265407bdee168d7ff1f67007a0b34"
+    },
+    {
+      "path": "docs/portfolio/DEMO.md",
+      "sha256": "9310998a005e08f339f22c47420227f949d5c8d8f675465e82edbf32d8a2b444"
+    },
+    {
+      "path": "docs/portfolio/THIRD_PARTY_NOTICES.md",
+      "sha256": "64cb02bde5a2786959e26db942c8380a38f3787681f8293fd6049de386972d7d"
+    },
+    {
+      "path": "docs/portfolio/atlas/atlas-layout.mjs",
+      "sha256": "9e99f32aaa38cff456074c42873f0a96d7d05772a9fa695a0722950fca3f1be9"
+    },
+    {
+      "path": "docs/portfolio/atlas/atlas.json",
+      "sha256": "1eba627da4d13180730fe01c01d679ddeeebf21143db93044668420be3e02bde"
+    },
+    {
+      "path": "docs/portfolio/atlas/build.mjs",
+      "sha256": "f03e2bc7cff5f472848246720a6f8f1f685d616a4a8df97c3cbc840eb29a3f59"
+    },
+    {
+      "path": "docs/portfolio/atlas/index.html",
+      "sha256": "1b1e98e970fa488a45a922cff79892a085e42459d5e8a57e65b0309ebdeea81e"
+    },
+    {
+      "path": "docs/portfolio/atlas/vendor/archify/LICENSE",
+      "sha256": "2f724fa953b4eaa8ec75fa56919ce474b57adce54d2456a3791510bc53735cbd"
+    },
+    {
+      "path": "docs/portfolio/atlas/vendor/archify/assets/atlas/runtime.js",
+      "sha256": "26f1271905e99c5bc7c60766f9e4ebd2eb6cb790e791749df85ae04233b58d76"
+    },
+    {
+      "path": "docs/portfolio/atlas/vendor/archify/assets/atlas/style.css",
+      "sha256": "1718504adccfb7717b2d3d22f884c6929d648b7c02c389cd783ae4eef18b99a6"
+    },
+    {
+      "path": "docs/portfolio/atlas/vendor/archify/renderers/atlas/core.mjs",
+      "sha256": "2789e95ab790a3bffaa33744d689d7121b59c8240d52e64aba8c1809282b5af8"
+    },
+    {
+      "path": "docs/portfolio/atlas/vendor/archify/renderers/atlas/render.mjs",
+      "sha256": "27d2162b30a806731d7527bcad7ee84d469449ea8ef46cefc7d920c44676984d"
+    },
+    {
+      "path": "docs/portfolio/atlas/vendor/archify/renderers/atlas/validate.mjs",
+      "sha256": "116176e4487854b17dcad6259aeab588ce00a0feeaf635122b71fe5b55554db0"
+    },
+    {
+      "path": "docs/portfolio/evidence/graph-roundtrip.json",
+      "sha256": "06c7d62cb2d9b47c03a9a487957b8c14c6196766615e43f7d96faa83f5d85916"
+    },
+    {
+      "path": "docs/portfolio/evidence/verification.json",
+      "sha256": "25f17edf5a2f5e8072f942d9bc6b10b01a154d6bc1f07610317ad7a598fd285d"
+    },
+    {
+      "path": "docs/portfolio/images/foundation-api.jpg",
+      "sha256": "9e4c349d8a0b7a2282e942f5b619c5527a77cd17b36d0b949268e5dee1a99f9b"
+    },
+    {
+      "path": "docs/portfolio/images/tracewise-evidence-graph.png",
+      "sha256": "87dd9fdec43f13b15ff82b7cc9dcecb773534fee8740d66ed70d27afb6caa163"
+    },
+    {
+      "path": "examples/portfolio/graph_roundtrip.py",
+      "sha256": "afbeed024cd59511d745d82bde5446f70ea340843e0c730319a39664cc1f6212"
+    },
+    {
+      "path": "examples/portfolio/prepare.py",
+      "sha256": "551392ea42a38f59a7b0393d8179a934727c5f7221b5807c6d4817a686a03cfd"
+    },
+    {
+      "path": "public_contracts/foundation-v1-applications.json",
+      "sha256": "c4802263e22d78cf67be7c212a6691a658030d70acc1901bd6331bd6e1b97a2b"
+    },
+    {
+      "path": "public_contracts/foundation-v1-context.json",
+      "sha256": "d59a9930bad94fb873915aa4e14c35039ff25bf3c954514e731fbc178e6a2f19"
+    },
+    {
+      "path": "public_contracts/foundation-v1-evidence.json",
+      "sha256": "b484ec095e0f482d916b1db7ab12db3bfcd30424b18feaade9ee84a082610702"
+    },
+    {
+      "path": "public_contracts/foundation-v1-graph.json",
+      "sha256": "50b38c2b89def94eff6462c1c0e58461c36056170ee31491f1f3ca9dd657914c"
+    },
+    {
+      "path": "public_contracts/foundation-v1-jobs.json",
+      "sha256": "ce5fc20386a5729de4e68b5529d7435dc9bd9aa133e02c56f6535b5fb1cab1ce"
+    },
+    {
+      "path": "public_contracts/foundation-v1-management.json",
+      "sha256": "39c69b94dcdd6c597b2ec0eb9d1edda41770c75659d885bbf76154f86df4e513"
+    },
+    {
+      "path": "public_contracts/foundation-v1-memory.json",
+      "sha256": "f4f37b3593a8edd75c4d3c065aec37268d3c1bcccea4148bf0a3f13ffc576576"
+    },
+    {
+      "path": "public_contracts/foundation-v1-routes.json",
+      "sha256": "064417d8db88e5db61b350b410afaedf93b52fd53612d206c676952a1452a480"
+    },
+    {
+      "path": "public_contracts/foundation-v1.json",
+      "sha256": "5147268fbeeb3c9f5f61d3742e8019abd9747d2455d1c1b4681a0e85c0fd99a5"
+    },
+    {
+      "path": "public_contracts/legacy-behavior-workflow-map-v1.json",
+      "sha256": "22c6607f30e88ba5af1cb84dd56b2f1582ee040d9469720e1f657fbba35d35b5"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "960e9db0b765aa10f26ad042a1256640efa19267b1ea1577e3973b7a98864bd2"
+    },
+    {
+      "path": "scripts/build_clean_service.py",
+      "sha256": "5ea4d5894bb5cff87843728b9250edaf245ae12ddcb3b0ac38c0add86238554a"
+    },
+    {
+      "path": "scripts/candidate_files.py",
+      "sha256": "abeba4f06921c6e860ea47022a5556a7a9f6f7d04c3f38e0fc301fb5c02375f8"
+    },
+    {
+      "path": "scripts/export_portfolio.py",
+      "sha256": "33d4caa30582dd8a192892fa61b44cd147786560ab5284b89d543527bb6296fd"
+    },
+    {
+      "path": "scripts/package_parity.py",
+      "sha256": "fc3fc6f441000677e1083f01fbedee6dcebb41e71fa86e81173a83e24efcdacc"
+    },
+    {
+      "path": "sdk/foundation-python/README.md",
+      "sha256": "e81323898c85385548b5672a7e36539f4b343611b9ea07a96a115dbf769e1dda"
+    },
+    {
+      "path": "sdk/foundation-python/pyproject.toml",
+      "sha256": "962bee8eeb14c0883fcc70fe33e906de14222e4a91b276c2fc00909195aef462"
+    },
+    {
+      "path": "sdk/foundation-python/src/agent_foundation_client/__init__.py",
+      "sha256": "6f5fa9a2f3d23a1b00d85acf6c844905a45b2bf7118764e03771f0e95b439407"
+    },
+    {
+      "path": "sdk/foundation-python/src/agent_foundation_client/client.py",
+      "sha256": "6dbe8ad5e5bb95dab9eb0f9c4ee00c11104240aee204daffcccd7d1ccd236da4"
+    },
+    {
+      "path": "sdk/foundation-python/src/agent_foundation_client/routes.py",
+      "sha256": "b5bff6836aed9635a4f2c34cfb608a2ff3b2ef9aa8b567ccc783d53ae9d682b4"
+    },
+    {
+      "path": "sdk/foundation-python/tests/test_client.py",
+      "sha256": "527397c685e8c89dd5624d671bfb8a2d18e1b0a41a5a826647ded4db45ff0eca"
+    },
+    {
+      "path": "sdk/typescript/README.md",
+      "sha256": "6b3e7b520c34e2b050f6740de46653937931ae10a900d26ddc0e4c47ca206ac6"
+    },
+    {
+      "path": "sdk/typescript/package-lock.json",
+      "sha256": "0f66b52410591cf36bcbcaeb40142eec0feab4e5e68eb6b8dcc42df836a34cfb"
+    },
+    {
+      "path": "sdk/typescript/package.json",
+      "sha256": "a6c4bed0451d304cfeb0bf219e2b20f1ff03179b1de71be0ab8c91c9e3156b74"
+    },
+    {
+      "path": "sdk/typescript/src/index.ts",
+      "sha256": "362acf42e52d594874b4ce4cb1acc97ee94e067b626757827ccba2016d6ae01d"
+    },
+    {
+      "path": "sdk/typescript/src/routes.ts",
+      "sha256": "6b4f0466a53038b52f0d0c672fa496f885723bff7b34f4384fd3abf74b80c383"
+    },
+    {
+      "path": "sdk/typescript/tests/client.test.mjs",
+      "sha256": "9144c53c5212f5bf1b1bd5fba839d42a65212577e0e7f1c3bffcfe29f27c6859"
+    },
+    {
+      "path": "sdk/typescript/tsconfig.json",
+      "sha256": "7c91a2f9435fdfa0b59b707ab9e04ed56a8f31c3c1cfcd92ccc85ffb917d8b73"
+    }
+  ]
+}

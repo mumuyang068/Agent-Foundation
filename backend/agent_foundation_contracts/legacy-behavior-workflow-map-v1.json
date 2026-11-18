@@ -1,0 +1,1509 @@
+{
+  "schema_version": "agent-foundation.legacy-behavior-workflow-map.v1",
+  "source_ref": "f5a1281630eda197e60dc4e23f955c8ebf02cb42",
+  "inventory_sha256": "ad594c6f1fed1d97a481c367d4dcc2f4870fcdcbfea3e079a4a807cf34d69e09",
+  "review_status": "code-confirmed",
+  "review_basis": "Exact HTTP and same-process identities grouped into replacement workflows; no runtime keyword or owner fallback is permitted by the completion gate.",
+  "entries": {
+    "backend/agent_foundation/api/agent_recipes.py:DELETE:/external/registrations/{registration_id}/strategy-draft:discard_external_project_strategy_draft": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:GET:/external/adopter-kit:external_project_adopter_kit": {
+      "workflow": "evaluation-diagnostics",
+      "classification_rule": "management-readiness"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:GET:/external/authority-memory-blueprint-releases:list_external_project_authority_variant_releases": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:GET:/external/authority-profiles/{profile_id}/authority-pack:export_external_project_authority_pack": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:GET:/external/catalog:external_project_capability_catalog": {
+      "workflow": "evaluation-diagnostics",
+      "classification_rule": "management-readiness"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:GET:/external/memory-blueprint-variants:list_external_project_memory_blueprint_variants": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:GET:/external/memory-blueprints/configuration-contract:external_project_memory_blueprint_configuration_contract": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:GET:/external/preflight:external_project_deployment_preflight": {
+      "workflow": "evaluation-diagnostics",
+      "classification_rule": "management-readiness"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:GET:/external/product-runtime/registrations/{registration_id}/service-binding:product_runtime_service_binding": {
+      "workflow": "identity-access",
+      "classification_rule": "product-access-binding"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:GET:/external/registrations/{registration_id}/audit:audit_external_project_registration": {
+      "workflow": "identity-access",
+      "classification_rule": "identity-access"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:GET:/external/registrations/{registration_id}/canonical-entities/{entity_ref}:resolve_registered_canonical_entity": {
+      "workflow": "graph-entity-normalization",
+      "classification_rule": "entity-normalization"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:GET:/external/registrations/{registration_id}/credential-diagnostic:diagnose_external_project_credential": {
+      "workflow": "evaluation-diagnostics",
+      "classification_rule": "management-readiness"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:GET:/external/registrations/{registration_id}/entity-aliases/resolve:resolve_registered_external_project_entity_ref": {
+      "workflow": "graph-entity-normalization",
+      "classification_rule": "entity-normalization"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:GET:/external/registrations/{registration_id}/entity-aliases:list_registered_external_project_entity_aliases": {
+      "workflow": "graph-entity-normalization",
+      "classification_rule": "entity-normalization"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:GET:/external/registrations/{registration_id}/entity-canonicalization-candidates:discover_registered_entity_canonicalization": {
+      "workflow": "graph-entity-normalization",
+      "classification_rule": "entity-normalization"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:GET:/external/registrations/{registration_id}/handoff-closeout:external_project_handoff_closeout_state": {
+      "workflow": "controlled-transfer",
+      "classification_rule": "controlled-transfer"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:GET:/external/registrations/{registration_id}/handoff-issuances:list_external_project_handoff_issuances": {
+      "workflow": "controlled-transfer",
+      "classification_rule": "controlled-transfer"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:GET:/external/registrations/{registration_id}/handoff-timeline:external_project_handoff_lifecycle_timeline": {
+      "workflow": "controlled-transfer",
+      "classification_rule": "controlled-transfer"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:GET:/external/registrations/{registration_id}/handoff.zip:download_external_project_handoff": {
+      "workflow": "controlled-transfer",
+      "classification_rule": "controlled-transfer"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:GET:/external/registrations/{registration_id}/memory-extractor-certificate-revocations:list_registered_external_project_memory_extractor_certificate_revocations": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:GET:/external/registrations/{registration_id}/memory-extractor-certificates:list_registered_external_project_memory_extractor_certificates": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:GET:/external/registrations/{registration_id}/memory-extractor-diagnostic:diagnose_registered_external_project_memory_extractor": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:GET:/external/registrations/{registration_id}/memory-extractors:list_registered_external_project_memory_extractors": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:GET:/external/registrations/{registration_id}/memory-governance/{governance_id}:get_registered_agent_memory_governance": {
+      "workflow": "memory-formation",
+      "classification_rule": "memory-formation"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:GET:/external/registrations/{registration_id}/memory-interaction-diagnostic:diagnose_external_project_memory_interactions": {
+      "workflow": "memory-formation",
+      "classification_rule": "memory-formation"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:GET:/external/registrations/{registration_id}/memory-revision-sets/latest:latest_external_project_memory_revision_set": {
+      "workflow": "memory-maintenance-recovery",
+      "classification_rule": "memory-maintenance"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:GET:/external/registrations/{registration_id}/memory-schemas:list_registered_external_project_memory_schemas": {
+      "workflow": "graph-schema-evolution",
+      "classification_rule": "schema-evolution"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:GET:/external/registrations/{registration_id}/model-capabilities:inspect_external_project_model_capabilities": {
+      "workflow": "evaluation-diagnostics",
+      "classification_rule": "management-readiness"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:GET:/external/registrations/{registration_id}/observation-governance/{governance_id}:get_registered_agent_observation_governance": {
+      "workflow": "memory-formation",
+      "classification_rule": "memory-formation"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:GET:/external/registrations/{registration_id}/reflective-rewrite-diagnostic:diagnose_external_project_reflective_rewrite": {
+      "workflow": "memory-maintenance-recovery",
+      "classification_rule": "memory-maintenance"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:GET:/external/registrations/{registration_id}/reinforcement-diagnostic:registered_external_project_reinforcement_diagnostic": {
+      "workflow": "memory-feedback-correction",
+      "classification_rule": "memory-feedback"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:GET:/external/registrations/{registration_id}/reinforcement-events:list_registered_external_project_reinforcement": {
+      "workflow": "memory-feedback-correction",
+      "classification_rule": "memory-feedback"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:GET:/external/registrations/{registration_id}/relation-projection:read_registered_agent_relation_projection": {
+      "workflow": "graph-retrieval",
+      "classification_rule": "graph-read"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:GET:/external/registrations/{registration_id}/resident-policy-preview:preview_external_project_resident_policy": {
+      "workflow": "context-resident",
+      "classification_rule": "resident-context"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:GET:/external/registrations/{registration_id}/runtime-feedback/{memory_id}/projection:registered_external_project_runtime_feedback_projection": {
+      "workflow": "memory-feedback-correction",
+      "classification_rule": "memory-feedback"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:GET:/external/registrations/{registration_id}/schema-candidates/{candidate_id}/promotion-preflight:preflight_registered_external_project_schema_candidate_promotion": {
+      "workflow": "graph-schema-evolution",
+      "classification_rule": "schema-evolution"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:GET:/external/registrations/{registration_id}/schema-candidates:list_registered_external_project_schema_candidates": {
+      "workflow": "graph-schema-evolution",
+      "classification_rule": "schema-evolution"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:GET:/external/registrations/{registration_id}/strategy-bundles/{bundle_id}:get_external_project_strategy_bundle": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:GET:/external/registrations/{registration_id}/strategy-bundles:list_external_project_strategy_bundles": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:GET:/external/registrations/{registration_id}/strategy-composition:get_external_project_strategy_composition": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:GET:/external/registrations/{registration_id}/strategy-draft:get_external_project_strategy_draft": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:GET:/external/registrations/{registration_id}/task-proposals:list_registered_external_project_task_proposals": {
+      "workflow": "memory-formation",
+      "classification_rule": "reviewable-memory-proposals"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:GET:/external/registrations/{registration_id}/temporal-relations:list_registered_external_project_temporal_relations": {
+      "workflow": "graph-temporal-relations",
+      "classification_rule": "temporal-relation"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:GET:/external/registrations/{registration_id}:get_external_project_registration": {
+      "workflow": "identity-access",
+      "classification_rule": "identity-access"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:GET:/external/registrations:list_external_project_registrations": {
+      "workflow": "identity-access",
+      "classification_rule": "identity-access"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:GET:/external/templates/{project_id}:external_project_recipe_template": {
+      "workflow": "evaluation-diagnostics",
+      "classification_rule": "management-readiness"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/adoptions:adopt_external_project": {
+      "workflow": "identity-access",
+      "classification_rule": "identity-access"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/authority-memory-blueprint-candidates/intake:intake_external_project_authority_variant_candidate": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/authority-memory-blueprint-refreshes/assess:assess_external_project_authority_variant_refresh": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/authority-memory-blueprint-refreshes/intake:intake_external_project_authority_variant_refresh": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/authority-memory-blueprint-releases/review:review_external_project_authority_variant_release": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/authority-memory-blueprint-releases/{release_id}/deprecate:deprecate_external_project_authority_variant_release": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/authority-memory-blueprint-releases/{release_id}/publish:publish_external_project_authority_variant_release": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/authority-packs/preview:preview_external_project_authority_pack": {
+      "workflow": "identity-access",
+      "classification_rule": "identity-access"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/authority-profiles/advise:advise_external_project_authority_profile": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/diagnostics:inspect_external_project_runtime": {
+      "workflow": "evaluation-diagnostics",
+      "classification_rule": "management-readiness"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/memory-blueprint-variants/advise:advise_external_project_memory_blueprint_variant": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/memory-blueprint-variants/{variant_id}/{variant_version}/archive:archive_external_project_memory_blueprint_variant": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/memory-blueprint-variants:create_external_project_memory_blueprint_variant": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/memory-blueprints/preview:preview_external_project_memory_blueprint": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/prepare:prepare_external_project_context": {
+      "workflow": "context-assembly",
+      "classification_rule": "context-assembly"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/product-runtime/managed-registrations:register_managed_product_runtime": {
+      "workflow": "identity-access",
+      "classification_rule": "product-access-binding"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/product-runtime/preview:preview_product_runtime": {
+      "workflow": "evaluation-diagnostics",
+      "classification_rule": "management-readiness"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/product-runtime/registrations/{registration_id}/delegation-binding:provision_product_runtime_delegation_binding": {
+      "workflow": "identity-access",
+      "classification_rule": "product-access-binding"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/product-runtime/registrations/{registration_id}/invoke:invoke_product_runtime": {
+      "workflow": "agent-application-turn",
+      "classification_rule": "authorized-application-invocation"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/product-runtime/registrations/{registration_id}/open:open_product_runtime": {
+      "workflow": "agent-application-turn",
+      "classification_rule": "authorized-application-invocation"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/product-runtime/registrations:register_product_runtime": {
+      "workflow": "identity-access",
+      "classification_rule": "product-access-binding"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/background-maintenance-runs/apply:apply_external_project_background_maintenance_candidate": {
+      "workflow": "memory-maintenance-recovery",
+      "classification_rule": "memory-maintenance"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/background-maintenance-runs/rollback:rollback_external_project_background_maintenance_apply": {
+      "workflow": "memory-maintenance-recovery",
+      "classification_rule": "memory-maintenance"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/background-maintenance-runs:create_external_project_background_maintenance_run": {
+      "workflow": "memory-maintenance-recovery",
+      "classification_rule": "memory-maintenance"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/capacity-forgetting/execute:execute_registered_external_project_capacity_forgetting": {
+      "workflow": "memory-maintenance-recovery",
+      "classification_rule": "memory-maintenance"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/capacity-forgetting/preview:preview_registered_external_project_capacity_forgetting": {
+      "workflow": "memory-maintenance-recovery",
+      "classification_rule": "memory-maintenance"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/capacity-forgetting/restore:restore_registered_external_project_capacity_forgetting": {
+      "workflow": "memory-maintenance-recovery",
+      "classification_rule": "memory-maintenance"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/community-topology/projection:build_registered_community_topology_projection": {
+      "workflow": "graph-community-topology",
+      "classification_rule": "community-topology"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/entity-aliases/{event_id}/confirm:confirm_registered_external_project_entity_alias": {
+      "workflow": "graph-entity-normalization",
+      "classification_rule": "entity-normalization"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/entity-aliases/{event_id}/revert:revert_registered_external_project_entity_alias": {
+      "workflow": "graph-entity-normalization",
+      "classification_rule": "entity-normalization"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/entity-aliases:assert_registered_external_project_entity_alias": {
+      "workflow": "graph-entity-normalization",
+      "classification_rule": "entity-normalization"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/entity-canonicalization-plans/apply:apply_registered_entity_canonicalization": {
+      "workflow": "graph-entity-normalization",
+      "classification_rule": "entity-normalization"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/entity-canonicalization-plans:plan_registered_entity_canonicalization": {
+      "workflow": "graph-entity-normalization",
+      "classification_rule": "entity-normalization"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/entity-reflection-plans/apply:apply_registered_external_project_entity_reflection": {
+      "workflow": "graph-entity-normalization",
+      "classification_rule": "entity-normalization"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/entity-reflection-plans:plan_registered_external_project_entity_reflection": {
+      "workflow": "graph-entity-normalization",
+      "classification_rule": "entity-normalization"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/entity-resolution-candidates:discover_registered_external_project_entity_candidates": {
+      "workflow": "graph-entity-normalization",
+      "classification_rule": "entity-normalization"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/explicit-feedback-amendments:apply_registered_external_project_explicit_feedback": {
+      "workflow": "memory-feedback-correction",
+      "classification_rule": "memory-feedback"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/graph-formation-observations:form_registered_external_project_memory_graph": {
+      "workflow": "graph-proposal-authority",
+      "classification_rule": "graph-authority"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/handoff-closeout:acknowledge_external_project_handoff": {
+      "workflow": "controlled-transfer",
+      "classification_rule": "controlled-transfer"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/handoff-issuances:issue_external_project_handoff": {
+      "workflow": "controlled-transfer",
+      "classification_rule": "controlled-transfer"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/implicit-dreaming/plans/execute:execute_external_project_implicit_dreaming": {
+      "workflow": "memory-maintenance-recovery",
+      "classification_rule": "memory-maintenance"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/implicit-dreaming/plans:plan_external_project_implicit_dreaming": {
+      "workflow": "memory-maintenance-recovery",
+      "classification_rule": "memory-maintenance"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/implicit-dreaming/windows:freeze_external_project_implicit_dreaming_window": {
+      "workflow": "memory-maintenance-recovery",
+      "classification_rule": "memory-maintenance"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/lifecycle-plans/apply:apply_external_project_lifecycle_candidate": {
+      "workflow": "memory-maintenance-recovery",
+      "classification_rule": "memory-maintenance"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/lifecycle-plans/rollback:rollback_external_project_lifecycle_apply": {
+      "workflow": "memory-maintenance-recovery",
+      "classification_rule": "memory-maintenance"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/lifecycle-plans/validate:validate_external_project_lifecycle_plan": {
+      "workflow": "memory-maintenance-recovery",
+      "classification_rule": "memory-maintenance"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/lifecycle-plans:create_external_project_lifecycle_plan": {
+      "workflow": "memory-maintenance-recovery",
+      "classification_rule": "memory-maintenance"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/memory-blueprint-restore-preview:preview_external_project_memory_blueprint_restore": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/memory-blueprint-restore:restore_external_project_memory_blueprint": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/memory-blueprint-upgrade-check:check_external_project_memory_blueprint_upgrade": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/memory-blueprint-upgrade-preview:preview_external_project_memory_blueprint_upgrade": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/memory-blueprint-upgrade:replace_external_project_memory_blueprint": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/memory-conformance:verify_external_project_memory_conformance": {
+      "workflow": "memory-formation",
+      "classification_rule": "memory-formation"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/memory-extractor-certificates/{certificate_id}/revocations:revoke_registered_external_project_memory_extractor_certificate": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/memory-extractors/{adapter_publication_id}/certifications:certify_registered_external_project_memory_extractor": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/memory-extractors:publish_registered_external_project_memory_extractor": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/memory-governance/reviews:review_registered_agent_memory_formation": {
+      "workflow": "memory-formation",
+      "classification_rule": "memory-formation"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/memory-governance:govern_registered_agent_memory": {
+      "workflow": "memory-formation",
+      "classification_rule": "memory-formation"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/memory-revision-sets/apply:apply_external_project_memory_revision_set": {
+      "workflow": "memory-maintenance-recovery",
+      "classification_rule": "memory-maintenance"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/memory-revision-sets/plan:plan_external_project_memory_revision_set": {
+      "workflow": "memory-maintenance-recovery",
+      "classification_rule": "memory-maintenance"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/memory-revision-sets/recover:recover_external_project_memory_revision_set": {
+      "workflow": "memory-maintenance-recovery",
+      "classification_rule": "memory-maintenance"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/memory-revision-sets/rollback:rollback_external_project_memory_revision_set": {
+      "workflow": "memory-maintenance-recovery",
+      "classification_rule": "memory-maintenance"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/memory-schema-binding:bind_registered_external_project_memory_schema": {
+      "workflow": "graph-schema-evolution",
+      "classification_rule": "schema-evolution"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/memory-schemas/{publication_id}/deprecate:deprecate_registered_external_project_memory_schema": {
+      "workflow": "graph-schema-evolution",
+      "classification_rule": "schema-evolution"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/memory-schemas:publish_registered_external_project_memory_schema": {
+      "workflow": "graph-schema-evolution",
+      "classification_rule": "schema-evolution"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/model-capabilities/prepare:prepare_external_project_model_capability": {
+      "workflow": "evaluation-diagnostics",
+      "classification_rule": "management-readiness"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/model-capabilities/submit:submit_external_project_model_capability": {
+      "workflow": "evaluation-diagnostics",
+      "classification_rule": "management-readiness"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/observation-governance/reviews:review_registered_agent_relation": {
+      "workflow": "graph-proposal-authority",
+      "classification_rule": "graph-authority"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/observation-governance:govern_registered_agent_observation": {
+      "workflow": "memory-formation",
+      "classification_rule": "memory-formation"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/observation-routing/plan:plan_registered_agent_observation": {
+      "workflow": "memory-formation",
+      "classification_rule": "memory-formation"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/online-schema-evolution/plans/apply:apply_registered_external_project_online_schema_evolution": {
+      "workflow": "graph-schema-evolution",
+      "classification_rule": "schema-evolution"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/online-schema-evolution/plans:plan_registered_external_project_online_schema_evolution": {
+      "workflow": "graph-schema-evolution",
+      "classification_rule": "schema-evolution"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/online-schema-evolution/windows:freeze_registered_external_project_online_schema_window": {
+      "workflow": "graph-schema-evolution",
+      "classification_rule": "schema-evolution"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/prepare:prepare_registered_external_project": {
+      "workflow": "agent-application-turn",
+      "classification_rule": "application-turn"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/reflective-rewrite-plans/apply:apply_external_project_reflective_rewrite": {
+      "workflow": "memory-maintenance-recovery",
+      "classification_rule": "memory-maintenance"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/reflective-rewrite-plans/rollback:rollback_external_project_reflective_rewrite": {
+      "workflow": "memory-maintenance-recovery",
+      "classification_rule": "memory-maintenance"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/reflective-rewrite-plans:create_external_project_reflective_rewrite_plan": {
+      "workflow": "memory-maintenance-recovery",
+      "classification_rule": "memory-maintenance"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/reinforcement-events/{event_id}/contest:contest_registered_external_project_reinforcement": {
+      "workflow": "memory-feedback-correction",
+      "classification_rule": "memory-feedback"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/reinforcement-events/{event_id}/retract:retract_registered_external_project_reinforcement": {
+      "workflow": "memory-feedback-correction",
+      "classification_rule": "memory-feedback"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/reinforcement-events:observe_registered_external_project_reinforcement": {
+      "workflow": "memory-feedback-correction",
+      "classification_rule": "memory-feedback"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/reinforcement-projection/verify:verify_registered_external_project_reinforcement": {
+      "workflow": "memory-feedback-correction",
+      "classification_rule": "memory-feedback"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/relation-evolution/plans/apply:apply_registered_relation_evolution": {
+      "workflow": "graph-relation-learning",
+      "classification_rule": "relation-learning"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/relation-evolution/plans:plan_registered_relation_evolution": {
+      "workflow": "graph-relation-learning",
+      "classification_rule": "relation-learning"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/relation-evolution/recall:recall_registered_relation_evolution": {
+      "workflow": "graph-relation-learning",
+      "classification_rule": "relation-learning"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/resident-context-preview:preview_external_project_resident_context": {
+      "workflow": "context-resident",
+      "classification_rule": "resident-context"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/resident-context-replace:replace_external_project_resident_context": {
+      "workflow": "context-resident",
+      "classification_rule": "resident-context"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/resident-policy-refresh:refresh_external_project_resident_policy": {
+      "workflow": "context-resident",
+      "classification_rule": "resident-context"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/revoke:revoke_external_project_registration": {
+      "workflow": "identity-access",
+      "classification_rule": "identity-access"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/runtime-feedback:submit_registered_external_project_runtime_feedback": {
+      "workflow": "memory-feedback-correction",
+      "classification_rule": "memory-feedback"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/schema-bound-properties:write_registered_external_project_schema_bound_property": {
+      "workflow": "graph-schema-evolution",
+      "classification_rule": "schema-evolution"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/schema-candidates/{candidate_id}/activate:activate_registered_external_project_schema_candidate": {
+      "workflow": "graph-schema-evolution",
+      "classification_rule": "schema-evolution"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/schema-candidates/{candidate_id}/migrate:execute_registered_external_project_schema_migration": {
+      "workflow": "graph-schema-evolution",
+      "classification_rule": "schema-evolution"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/schema-candidates/{candidate_id}/migration-preview:preview_registered_external_project_schema_migration": {
+      "workflow": "graph-schema-evolution",
+      "classification_rule": "schema-evolution"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/schema-candidates/{candidate_id}/migration-rollback:rollback_registered_external_project_schema_migration": {
+      "workflow": "graph-schema-evolution",
+      "classification_rule": "schema-evolution"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/schema-candidates/{candidate_id}/publish:publish_registered_external_project_schema_candidate": {
+      "workflow": "graph-schema-evolution",
+      "classification_rule": "schema-evolution"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/schema-candidates/{candidate_id}/rollback:rollback_registered_external_project_schema_candidate": {
+      "workflow": "graph-schema-evolution",
+      "classification_rule": "schema-evolution"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/schema-candidates/{candidate_id}/validations:validate_registered_external_project_schema_candidate": {
+      "workflow": "graph-schema-evolution",
+      "classification_rule": "schema-evolution"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/schema-candidates:submit_registered_external_project_schema_candidate": {
+      "workflow": "graph-schema-evolution",
+      "classification_rule": "schema-evolution"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/schema-memory-extractions:extract_registered_external_project_schema_memory": {
+      "workflow": "graph-schema-evolution",
+      "classification_rule": "schema-evolution"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/schema-memory-proposals:propose_registered_external_project_schema_memory": {
+      "workflow": "graph-schema-evolution",
+      "classification_rule": "schema-evolution"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/strategy-bundles:publish_external_project_strategy_bundle": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/strategy-composition/publish:publish_external_project_strategy_composition": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/strategy-preview:preview_external_project_strategy_migration": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/strategy-replace:replace_external_project_strategy": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/successful-task-observations:observe_registered_external_project_successful_task": {
+      "workflow": "memory-formation",
+      "classification_rule": "memory-formation"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/task-proposals/{observation_id}/runs/{run_id}/review:review_registered_external_project_task_proposal": {
+      "workflow": "memory-formation",
+      "classification_rule": "memory-formation"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/temporal-relations/retrieve:retrieve_registered_external_project_temporal_relations": {
+      "workflow": "graph-temporal-relations",
+      "classification_rule": "temporal-relation"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/temporal-relations/{event_id}/confirm:confirm_registered_external_project_temporal_relation": {
+      "workflow": "graph-temporal-relations",
+      "classification_rule": "temporal-relation"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/temporal-relations/{event_id}/invalidate:invalidate_registered_external_project_temporal_relation": {
+      "workflow": "graph-temporal-relations",
+      "classification_rule": "temporal-relation"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/temporal-relations/{event_id}/supersede:supersede_registered_external_project_temporal_relation": {
+      "workflow": "graph-temporal-relations",
+      "classification_rule": "temporal-relation"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations/{registration_id}/temporal-relations:assert_registered_external_project_temporal_relation": {
+      "workflow": "graph-temporal-relations",
+      "classification_rule": "temporal-relation"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/registrations:register_external_project": {
+      "workflow": "identity-access",
+      "classification_rule": "identity-access"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/strategy-compositions/compare-profile:compare_external_project_strategy_profile": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/strategy-compositions/preview:preview_external_project_strategy_composition": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/strategy-templates/preview:preview_external_project_strategy_template": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/external/validate:validate_external_project_recipe": {
+      "workflow": "evaluation-diagnostics",
+      "classification_rule": "management-readiness"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/personal/complete:complete_personal_reference": {
+      "workflow": "agent-application-turn",
+      "classification_rule": "application-adoption"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/personal/outcome:record_personal_reference_outcome": {
+      "workflow": "agent-application-turn",
+      "classification_rule": "application-adoption"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/personal/prepare:prepare_personal_reference": {
+      "workflow": "agent-application-turn",
+      "classification_rule": "application-adoption"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/teaching/assessment:complete_teaching_assessment": {
+      "workflow": "agent-application-turn",
+      "classification_rule": "application-adoption"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/teaching/intervention:propose_teaching_intervention": {
+      "workflow": "agent-application-turn",
+      "classification_rule": "application-adoption"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/teaching/outcome:record_teaching_reference_outcome": {
+      "workflow": "agent-application-turn",
+      "classification_rule": "application-adoption"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:POST:/teaching/prepare:prepare_teaching_reference": {
+      "workflow": "agent-application-turn",
+      "classification_rule": "application-adoption"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:PUT:/external/registrations/{registration_id}/authority-pack:save_external_project_authority_pack": {
+      "workflow": "identity-access",
+      "classification_rule": "identity-access"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:PUT:/external/registrations/{registration_id}/strategy-composition:save_external_project_strategy_composition": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:PUT:/external/registrations/{registration_id}/strategy-draft:save_external_project_strategy_draft": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/api/agent_recipes.py:PUT:/external/registrations/{registration_id}/strategy-profile:save_external_project_strategy_profile": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/api/delegation.py:GET:/foundation/v1/delegations/current-binding:current_binding": {
+      "workflow": "identity-access",
+      "classification_rule": "identity-access"
+    },
+    "backend/agent_foundation/api/delegation.py:POST:/foundation/v1/delegations/exchange:exchange": {
+      "workflow": "identity-access",
+      "classification_rule": "identity-access"
+    },
+    "backend/agent_foundation/api/managed_onboarding.py:GET:/foundation/v1/onboarding/intents/{intent_id}/result:onboarding_result": {
+      "workflow": "identity-access",
+      "classification_rule": "identity-access"
+    },
+    "backend/agent_foundation/api/managed_onboarding.py:GET:/foundation/v1/onboarding/intents/{intent_id}:onboarding_status": {
+      "workflow": "identity-access",
+      "classification_rule": "identity-access"
+    },
+    "backend/agent_foundation/api/managed_onboarding.py:POST:/foundation/v1/onboarding/intents:request_onboarding": {
+      "workflow": "identity-access",
+      "classification_rule": "identity-access"
+    },
+    "backend/agent_foundation/context/api.py:GET:/namespaces/{namespace}/snapshots/{snapshot_id}:get_snapshot": {
+      "workflow": "context-snapshots",
+      "classification_rule": "context-snapshot"
+    },
+    "backend/agent_foundation/context/api.py:POST:/namespaces/{namespace}/snapshots/{snapshot_id}/replay:replay_snapshot": {
+      "workflow": "context-snapshots",
+      "classification_rule": "context-snapshot"
+    },
+    "backend/agent_foundation/context/api.py:POST:/namespaces/{namespace}/snapshots:create_snapshot": {
+      "workflow": "context-snapshots",
+      "classification_rule": "context-snapshot"
+    },
+    "backend/agent_foundation/context/api_v2.py:GET:/contract:contract": {
+      "workflow": "evaluation-diagnostics",
+      "classification_rule": "management-readiness"
+    },
+    "backend/agent_foundation/context/api_v2.py:GET:/namespaces/{namespace}/snapshots/{snapshot_id}:get_snapshot": {
+      "workflow": "context-snapshots",
+      "classification_rule": "context-snapshot"
+    },
+    "backend/agent_foundation/context/api_v2.py:POST:/maintenance/snapshots/purge-expired:purge_expired_snapshots": {
+      "workflow": "context-snapshots",
+      "classification_rule": "context-snapshot"
+    },
+    "backend/agent_foundation/context/api_v2.py:POST:/namespaces/{namespace}/assemble:assemble_context": {
+      "workflow": "context-assembly",
+      "classification_rule": "context-assembly"
+    },
+    "backend/agent_foundation/context/api_v2.py:POST:/namespaces/{namespace}/snapshots/{snapshot_id}/replay:replay_snapshot": {
+      "workflow": "context-snapshots",
+      "classification_rule": "context-snapshot"
+    },
+    "backend/agent_foundation/context/api_v2.py:POST:/namespaces/{namespace}/snapshots:create_snapshot": {
+      "workflow": "context-snapshots",
+      "classification_rule": "context-snapshot"
+    },
+    "backend/agent_foundation/foundation_api.py:GET:/foundation/v1/diagnostics:diagnostics": {
+      "workflow": "evaluation-diagnostics",
+      "classification_rule": "management-readiness"
+    },
+    "backend/agent_foundation/foundation_api.py:GET:/foundation/v1/evidence/registrations/{registration_id}/receipts/{receipt_id}:get_evidence_receipt": {
+      "workflow": "evidence-authority",
+      "classification_rule": "evidence-authority"
+    },
+    "backend/agent_foundation/foundation_api.py:GET:/foundation/v1/evidence/registrations/{registration_id}/retrieval-status:evidence_retrieval_status": {
+      "workflow": "evidence-retrieval-support",
+      "classification_rule": "evidence-retrieval"
+    },
+    "backend/agent_foundation/foundation_api.py:GET:/foundation/v1/evidence/registrations/{registration_id}/revisions/{revision_id}:get_evidence_revision": {
+      "workflow": "evidence-authority",
+      "classification_rule": "evidence-authority"
+    },
+    "backend/agent_foundation/foundation_api.py:GET:/foundation/v1/evidence/registrations/{registration_id}/revisions:list_evidence_revisions": {
+      "workflow": "evidence-authority",
+      "classification_rule": "evidence-authority"
+    },
+    "backend/agent_foundation/foundation_api.py:GET:/foundation/v1/graph-bulk-sync/plans/{plan_id}/chunks/{chunk_index}/receipt:graph_bulk_sync_chunk_receipt": {
+      "workflow": "durable-jobs-bulk-sync",
+      "classification_rule": "durable-job"
+    },
+    "backend/agent_foundation/foundation_api.py:GET:/foundation/v1/graph-bulk-sync/plans/{plan_id}/completion-receipt:graph_bulk_sync_completion_receipt": {
+      "workflow": "durable-jobs-bulk-sync",
+      "classification_rule": "durable-job"
+    },
+    "backend/agent_foundation/foundation_api.py:GET:/foundation/v1/graph-bulk-sync/plans/{plan_id}/status:graph_bulk_sync_status": {
+      "workflow": "durable-jobs-bulk-sync",
+      "classification_rule": "durable-job"
+    },
+    "backend/agent_foundation/foundation_api.py:GET:/foundation/v1/graph-bulk-sync/plans/{plan_id}:graph_bulk_sync_plan": {
+      "workflow": "durable-jobs-bulk-sync",
+      "classification_rule": "durable-job"
+    },
+    "backend/agent_foundation/foundation_api.py:GET:/foundation/v1/graph-bulk-sync/registrations/{registration_id}/binding:graph_bulk_sync_binding": {
+      "workflow": "durable-jobs-bulk-sync",
+      "classification_rule": "durable-job"
+    },
+    "backend/agent_foundation/foundation_api.py:GET:/foundation/v1/graph-bulk-sync/registrations/{registration_id}/import-snapshot:graph_import_snapshot": {
+      "workflow": "durable-jobs-bulk-sync",
+      "classification_rule": "durable-job"
+    },
+    "backend/agent_foundation/foundation_api.py:GET:/foundation/v1/graph-proposals/receipts/{receipt_id}:get_graph_apply_receipt": {
+      "workflow": "graph-proposal-authority",
+      "classification_rule": "graph-authority"
+    },
+    "backend/agent_foundation/foundation_api.py:GET:/foundation/v1/graph-proposals/registrations/{registration_id}/baseline:graph_proposal_baseline": {
+      "workflow": "graph-proposal-authority",
+      "classification_rule": "graph-authority"
+    },
+    "backend/agent_foundation/foundation_api.py:GET:/foundation/v1/graph-proposals/registrations/{registration_id}/binding:graph_proposal_binding": {
+      "workflow": "graph-proposal-authority",
+      "classification_rule": "graph-authority"
+    },
+    "backend/agent_foundation/foundation_api.py:GET:/foundation/v1/graph-proposals/registrations/{registration_id}/node-retrieval/status:graph_node_retrieval_status": {
+      "workflow": "graph-retrieval",
+      "classification_rule": "graph-read"
+    },
+    "backend/agent_foundation/foundation_api.py:GET:/foundation/v1/graph-proposals/registrations/{registration_id}/proposal-snapshot:graph_proposal_snapshot": {
+      "workflow": "graph-proposal-authority",
+      "classification_rule": "graph-authority"
+    },
+    "backend/agent_foundation/foundation_api.py:GET:/foundation/v1/graph-proposals/registrations/{registration_id}/retrieval-view/status:graph_retrieval_view_status": {
+      "workflow": "index-projection-management",
+      "classification_rule": "projection-index"
+    },
+    "backend/agent_foundation/foundation_api.py:GET:/foundation/v1/graph-proposals/{proposal_id}:get_graph_proposal": {
+      "workflow": "graph-proposal-authority",
+      "classification_rule": "graph-authority"
+    },
+    "backend/agent_foundation/foundation_api.py:GET:/foundation/v1/graphs/{graph_id}/safe-projection:safe_graph_projection": {
+      "workflow": "graph-retrieval",
+      "classification_rule": "graph-read"
+    },
+    "backend/agent_foundation/foundation_api.py:GET:/foundation/v1/review-decisions/receipts/{receipt_id}:get_review_decision_receipt": {
+      "workflow": "durable-jobs-bulk-sync",
+      "classification_rule": "durable-job"
+    },
+    "backend/agent_foundation/foundation_api.py:GET:/health:health": {
+      "workflow": "evaluation-diagnostics",
+      "classification_rule": "management-readiness"
+    },
+    "backend/agent_foundation/foundation_api.py:POST:/foundation/v1/evidence/registrations/{registration_id}/revisions/{revision_id}/revoke:revoke_evidence": {
+      "workflow": "evidence-authority",
+      "classification_rule": "evidence-authority"
+    },
+    "backend/agent_foundation/foundation_api.py:POST:/foundation/v1/evidence/registrations/{registration_id}/revisions:admit_evidence": {
+      "workflow": "evidence-authority",
+      "classification_rule": "evidence-authority"
+    },
+    "backend/agent_foundation/foundation_api.py:POST:/foundation/v1/evidence/registrations/{registration_id}/search:search_evidence": {
+      "workflow": "evidence-retrieval-support",
+      "classification_rule": "evidence-retrieval"
+    },
+    "backend/agent_foundation/foundation_api.py:POST:/foundation/v1/graph-bulk-sync/plans/{plan_id}/authorizations:authorize_graph_bulk_sync_plan": {
+      "workflow": "durable-jobs-bulk-sync",
+      "classification_rule": "durable-job"
+    },
+    "backend/agent_foundation/foundation_api.py:POST:/foundation/v1/graph-bulk-sync/plans/{plan_id}/cancel:cancel_graph_bulk_sync_plan": {
+      "workflow": "durable-jobs-bulk-sync",
+      "classification_rule": "durable-job"
+    },
+    "backend/agent_foundation/foundation_api.py:POST:/foundation/v1/graph-bulk-sync/plans/{plan_id}/chunks:upload_graph_bulk_sync_chunk": {
+      "workflow": "durable-jobs-bulk-sync",
+      "classification_rule": "durable-job"
+    },
+    "backend/agent_foundation/foundation_api.py:POST:/foundation/v1/graph-bulk-sync/plans/{plan_id}/reject:reject_graph_bulk_sync_plan": {
+      "workflow": "durable-jobs-bulk-sync",
+      "classification_rule": "durable-job"
+    },
+    "backend/agent_foundation/foundation_api.py:POST:/foundation/v1/graph-bulk-sync/plans/{plan_id}/seal:seal_graph_bulk_sync_plan": {
+      "workflow": "durable-jobs-bulk-sync",
+      "classification_rule": "durable-job"
+    },
+    "backend/agent_foundation/foundation_api.py:POST:/foundation/v1/graph-bulk-sync/registrations/{registration_id}/plans:create_graph_bulk_sync_plan": {
+      "workflow": "durable-jobs-bulk-sync",
+      "classification_rule": "durable-job"
+    },
+    "backend/agent_foundation/foundation_api.py:POST:/foundation/v1/graph-proposals/recover-stranded:recover_stranded_graph_proposals": {
+      "workflow": "graph-proposal-authority",
+      "classification_rule": "graph-authority"
+    },
+    "backend/agent_foundation/foundation_api.py:POST:/foundation/v1/graph-proposals/registrations/{registration_id}/node-retrieval/search:graph_node_retrieval_search": {
+      "workflow": "graph-retrieval",
+      "classification_rule": "graph-read"
+    },
+    "backend/agent_foundation/foundation_api.py:POST:/foundation/v1/graph-proposals/registrations/{registration_id}/proposals:record_graph_proposal": {
+      "workflow": "graph-proposal-authority",
+      "classification_rule": "graph-authority"
+    },
+    "backend/agent_foundation/foundation_api.py:POST:/foundation/v1/graph-proposals/registrations/{registration_id}/retrieval-elements:graph_import_elements": {
+      "workflow": "graph-retrieval",
+      "classification_rule": "graph-read"
+    },
+    "backend/agent_foundation/foundation_api.py:POST:/foundation/v1/graph-proposals/registrations/{registration_id}/retrieval-page:graph_retrieval_page": {
+      "workflow": "graph-retrieval",
+      "classification_rule": "graph-read"
+    },
+    "backend/agent_foundation/foundation_api.py:POST:/foundation/v1/graph-proposals/registrations/{registration_id}/retrieval-search:graph_retrieval_search": {
+      "workflow": "graph-retrieval",
+      "classification_rule": "graph-read"
+    },
+    "backend/agent_foundation/foundation_api.py:POST:/foundation/v1/graph-proposals/registrations/{registration_id}/retrieval-view/check:graph_import_view_check": {
+      "workflow": "index-projection-management",
+      "classification_rule": "projection-index"
+    },
+    "backend/agent_foundation/foundation_api.py:POST:/foundation/v1/graph-proposals/{proposal_id}/reconcile:reconcile_graph_proposal": {
+      "workflow": "graph-proposal-authority",
+      "classification_rule": "graph-authority"
+    },
+    "backend/agent_foundation/foundation_api.py:POST:/foundation/v1/graph-proposals/{proposal_id}/review-decisions:review_graph_proposal": {
+      "workflow": "durable-jobs-bulk-sync",
+      "classification_rule": "durable-job"
+    },
+    "backend/agent_foundation/foundation_api.py:POST:/foundation/v1/graph-proposals/{proposal_id}/submit:submit_graph_proposal": {
+      "workflow": "graph-proposal-authority",
+      "classification_rule": "graph-authority"
+    },
+    "backend/agent_foundation/foundation_api.py:POST:/foundation/v1/graph-remediation-cases/{case_id}/review-decisions:review_graph_support_restoration": {
+      "workflow": "durable-jobs-bulk-sync",
+      "classification_rule": "durable-job"
+    },
+    "backend/agent_foundation/foundation_api.py:POST:/foundation/v1/review-decisions/submissions:submit_review_decision": {
+      "workflow": "durable-jobs-bulk-sync",
+      "classification_rule": "durable-job"
+    },
+    "backend/agent_foundation/foundation_api.py:POST:/foundation/v1/review-decisions:apply_review_decision": {
+      "workflow": "durable-jobs-bulk-sync",
+      "classification_rule": "durable-job"
+    },
+    "backend/agent_foundation/memory/api.py:GET:/contract:wire_contract": {
+      "workflow": "evaluation-diagnostics",
+      "classification_rule": "management-readiness"
+    },
+    "backend/agent_foundation/memory/api.py:GET:/evaluation/lab/runs/{run_id}:get_evaluation_lab_run": {
+      "workflow": "evaluation-diagnostics",
+      "classification_rule": "evaluation"
+    },
+    "backend/agent_foundation/memory/api.py:GET:/evaluation/lab/runs:list_evaluation_lab_runs": {
+      "workflow": "evaluation-diagnostics",
+      "classification_rule": "evaluation"
+    },
+    "backend/agent_foundation/memory/api.py:GET:/evaluation/lab/suites:list_evaluation_lab_suites": {
+      "workflow": "evaluation-diagnostics",
+      "classification_rule": "evaluation"
+    },
+    "backend/agent_foundation/memory/api.py:GET:/formation/reviews:formation_review_overview": {
+      "workflow": "memory-formation",
+      "classification_rule": "memory-formation"
+    },
+    "backend/agent_foundation/memory/api.py:GET:/formation/status:formation_status": {
+      "workflow": "memory-formation",
+      "classification_rule": "memory-formation"
+    },
+    "backend/agent_foundation/memory/api.py:GET:/namespaces/{namespace}/formation/reviews:formation_review_queue": {
+      "workflow": "memory-formation",
+      "classification_rule": "memory-formation"
+    },
+    "backend/agent_foundation/memory/api.py:GET:/namespaces/{namespace}/observations/{observation_id}/applications:list_formation_applications": {
+      "workflow": "memory-formation",
+      "classification_rule": "memory-formation"
+    },
+    "backend/agent_foundation/memory/api.py:GET:/namespaces/{namespace}/observations/{observation_id}:observation_trace": {
+      "workflow": "memory-formation",
+      "classification_rule": "memory-formation"
+    },
+    "backend/agent_foundation/memory/api.py:GET:/namespaces/{namespace}/policy/audit:get_policy_audit": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/memory/api.py:GET:/namespaces/{namespace}/policy/compare:compare_policy_versions": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/memory/api.py:GET:/namespaces/{namespace}/policy/history:get_policy_history": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/memory/api.py:GET:/namespaces/{namespace}/policy:get_effective_policy": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/memory/api.py:GET:/namespaces/{namespace}/records/{memory_id}/activation:activation": {
+      "workflow": "memory-feedback-correction",
+      "classification_rule": "memory-feedback"
+    },
+    "backend/agent_foundation/memory/api.py:GET:/namespaces/{namespace}/records/{memory_id}/trace:trace": {
+      "workflow": "memory-formation",
+      "classification_rule": "memory-formation"
+    },
+    "backend/agent_foundation/memory/api.py:GET:/namespaces/{namespace}/records:list_records": {
+      "workflow": "memory-formation",
+      "classification_rule": "memory-formation"
+    },
+    "backend/agent_foundation/memory/api.py:GET:/policy/presets:list_policy_presets": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/memory/api.py:GET:/profiles:list_profiles": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/memory/api.py:GET:/provider/diagnostics:provider_diagnostics": {
+      "workflow": "evaluation-diagnostics",
+      "classification_rule": "management-readiness"
+    },
+    "backend/agent_foundation/memory/api.py:GET:/provider/health:provider_health": {
+      "workflow": "evaluation-diagnostics",
+      "classification_rule": "management-readiness"
+    },
+    "backend/agent_foundation/memory/api.py:GET:/provider/manifest:provider_manifest": {
+      "workflow": "evaluation-diagnostics",
+      "classification_rule": "management-readiness"
+    },
+    "backend/agent_foundation/memory/api.py:GET:/provider/metrics:provider_metrics": {
+      "workflow": "evaluation-diagnostics",
+      "classification_rule": "management-readiness"
+    },
+    "backend/agent_foundation/memory/api.py:GET:/provider/projections/workers:provider_projection_workers": {
+      "workflow": "index-projection-management",
+      "classification_rule": "projection-index"
+    },
+    "backend/agent_foundation/memory/api.py:GET:/provider/projections:provider_projection_status": {
+      "workflow": "index-projection-management",
+      "classification_rule": "projection-index"
+    },
+    "backend/agent_foundation/memory/api.py:GET:/provider/scope-projection-runtime/staging-soak-jobs/{job_id}:get_scope_projection_staging_soak_job": {
+      "workflow": "durable-jobs-bulk-sync",
+      "classification_rule": "durable-job"
+    },
+    "backend/agent_foundation/memory/api.py:GET:/provider/scope-projection-runtime/staging-soak-jobs:list_scope_projection_staging_soak_jobs": {
+      "workflow": "durable-jobs-bulk-sync",
+      "classification_rule": "durable-job"
+    },
+    "backend/agent_foundation/memory/api.py:GET:/provider/scope-projection-runtime:scope_projection_runtime_diagnostics": {
+      "workflow": "memory-formation",
+      "classification_rule": "memory-formation"
+    },
+    "backend/agent_foundation/memory/api.py:GET:/provider:provider_capabilities": {
+      "workflow": "evaluation-diagnostics",
+      "classification_rule": "management-readiness"
+    },
+    "backend/agent_foundation/memory/api.py:GET:/strategies/assurance:strategy_assurance": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/memory/api.py:GET:/strategies/contract:strategy_contract": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/memory/api.py:GET:/strategies/resolve:resolve_strategy": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/memory/api.py:GET:/strategies:list_strategies": {
+      "workflow": "evaluation-diagnostics",
+      "classification_rule": "management-readiness"
+    },
+    "backend/agent_foundation/memory/api.py:POST:/evaluation/formation:run_formation_evaluation": {
+      "workflow": "evaluation-diagnostics",
+      "classification_rule": "evaluation"
+    },
+    "backend/agent_foundation/memory/api.py:POST:/evaluation/lab/runs:run_evaluation_lab": {
+      "workflow": "evaluation-diagnostics",
+      "classification_rule": "evaluation"
+    },
+    "backend/agent_foundation/memory/api.py:POST:/evaluation/matrix:run_evaluation_matrix": {
+      "workflow": "evaluation-diagnostics",
+      "classification_rule": "evaluation"
+    },
+    "backend/agent_foundation/memory/api.py:POST:/evaluation/run:run_evaluation": {
+      "workflow": "evaluation-diagnostics",
+      "classification_rule": "evaluation"
+    },
+    "backend/agent_foundation/memory/api.py:POST:/namespaces/{namespace}/maintenance/apply:apply_maintenance": {
+      "workflow": "memory-maintenance-recovery",
+      "classification_rule": "memory-maintenance"
+    },
+    "backend/agent_foundation/memory/api.py:POST:/namespaces/{namespace}/maintenance/plan:plan_maintenance": {
+      "workflow": "memory-maintenance-recovery",
+      "classification_rule": "memory-maintenance"
+    },
+    "backend/agent_foundation/memory/api.py:POST:/namespaces/{namespace}/observations/{observation_id}/retry:retry_observation": {
+      "workflow": "memory-formation",
+      "classification_rule": "memory-formation"
+    },
+    "backend/agent_foundation/memory/api.py:POST:/namespaces/{namespace}/observations/{observation_id}/runs/{run_id}/apply:apply_formation_run": {
+      "workflow": "memory-formation",
+      "classification_rule": "memory-formation"
+    },
+    "backend/agent_foundation/memory/api.py:POST:/namespaces/{namespace}/observations:observe": {
+      "workflow": "memory-formation",
+      "classification_rule": "memory-formation"
+    },
+    "backend/agent_foundation/memory/api.py:POST:/namespaces/{namespace}/policy/restore:restore_policy": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/memory/api.py:POST:/namespaces/{namespace}/policy/simulate:simulate_policy": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/memory/api.py:POST:/namespaces/{namespace}/recall:recall": {
+      "workflow": "memory-recall",
+      "classification_rule": "memory-recall"
+    },
+    "backend/agent_foundation/memory/api.py:POST:/namespaces/{namespace}/records/{memory_id}/feedback:feedback": {
+      "workflow": "memory-feedback-correction",
+      "classification_rule": "memory-feedback"
+    },
+    "backend/agent_foundation/memory/api.py:POST:/namespaces/{namespace}/records/{memory_id}/supersede:supersede": {
+      "workflow": "memory-feedback-correction",
+      "classification_rule": "memory-feedback"
+    },
+    "backend/agent_foundation/memory/api.py:POST:/namespaces/{namespace}/records/{memory_id}/transitions:transition": {
+      "workflow": "memory-feedback-correction",
+      "classification_rule": "memory-feedback"
+    },
+    "backend/agent_foundation/memory/api.py:POST:/namespaces/{namespace}/records:remember": {
+      "workflow": "memory-formation",
+      "classification_rule": "memory-formation"
+    },
+    "backend/agent_foundation/memory/api.py:POST:/provider/projections/dead-letters/requeue:requeue_provider_projection_dead_letters": {
+      "workflow": "index-projection-management",
+      "classification_rule": "projection-index"
+    },
+    "backend/agent_foundation/memory/api.py:POST:/provider/projections/flush:flush_provider_projections": {
+      "workflow": "index-projection-management",
+      "classification_rule": "projection-index"
+    },
+    "backend/agent_foundation/memory/api.py:POST:/provider/reindex:reindex_provider": {
+      "workflow": "index-projection-management",
+      "classification_rule": "projection-index"
+    },
+    "backend/agent_foundation/memory/api.py:POST:/provider/scope-projection-runtime/recall-preview:scope_projection_recall_preview": {
+      "workflow": "memory-recall",
+      "classification_rule": "memory-recall"
+    },
+    "backend/agent_foundation/memory/api.py:POST:/provider/scope-projection-runtime/staging-soak-jobs/{job_id}/cancel:cancel_scope_projection_staging_soak_job": {
+      "workflow": "durable-jobs-bulk-sync",
+      "classification_rule": "durable-job"
+    },
+    "backend/agent_foundation/memory/api.py:PUT:/namespaces/{namespace}/policy:save_policy": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/memory/session_api.py:DELETE:/session:delete_browser_session": {
+      "workflow": "identity-access",
+      "classification_rule": "session-access"
+    },
+    "backend/agent_foundation/memory/session_api.py:GET:/access/audit/export:export_security_audit": {
+      "workflow": "identity-access",
+      "classification_rule": "session-access"
+    },
+    "backend/agent_foundation/memory/session_api.py:GET:/access/audit:list_security_audit": {
+      "workflow": "identity-access",
+      "classification_rule": "session-access"
+    },
+    "backend/agent_foundation/memory/session_api.py:GET:/session:get_browser_session": {
+      "workflow": "identity-access",
+      "classification_rule": "session-access"
+    },
+    "backend/agent_foundation/memory/session_api.py:POST:/session:create_browser_session": {
+      "workflow": "identity-access",
+      "classification_rule": "session-access"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationApplicationFacade.compose": {
+      "workflow": "agent-application-turn",
+      "classification_rule": "application-turn"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationApplicationFacade.degraded_diagnostics": {
+      "workflow": "evaluation-diagnostics",
+      "classification_rule": "management-readiness"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationContextSnapshotPort.create": {
+      "workflow": "context-snapshots",
+      "classification_rule": "context-snapshot"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationContextSnapshotPort.get": {
+      "workflow": "context-snapshots",
+      "classification_rule": "context-snapshot"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationEvidenceAuthorityPort.admit": {
+      "workflow": "evidence-authority",
+      "classification_rule": "evidence-authority"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationEvidenceAuthorityPort.get_receipt": {
+      "workflow": "evidence-authority",
+      "classification_rule": "evidence-authority"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationEvidenceAuthorityPort.get_revision": {
+      "workflow": "evidence-authority",
+      "classification_rule": "evidence-authority"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationEvidenceAuthorityPort.list_revisions": {
+      "workflow": "evidence-authority",
+      "classification_rule": "evidence-authority"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationEvidenceAuthorityPort.retrieval_watermark": {
+      "workflow": "evidence-retrieval-support",
+      "classification_rule": "evidence-retrieval"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationEvidenceAuthorityPort.revoke": {
+      "workflow": "evidence-authority",
+      "classification_rule": "evidence-authority"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationMemoryPort.feedback": {
+      "workflow": "memory-feedback-correction",
+      "classification_rule": "memory-feedback"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationMemoryPort.find_by_source": {
+      "workflow": "memory-formation",
+      "classification_rule": "memory-formation"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationMemoryPort.recall": {
+      "workflow": "memory-recall",
+      "classification_rule": "memory-recall"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationMemoryPort.remember": {
+      "workflow": "memory-formation",
+      "classification_rule": "memory-formation"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationMemoryPort.trace": {
+      "workflow": "memory-formation",
+      "classification_rule": "memory-formation"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationMemoryPort.transition": {
+      "workflow": "memory-feedback-correction",
+      "classification_rule": "memory-feedback"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationModelBindingFacade.accept": {
+      "workflow": "identity-access",
+      "classification_rule": "identity-access"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationModelBindingFacade.diagnose": {
+      "workflow": "identity-access",
+      "classification_rule": "identity-access"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationModelBindingFacade.prepare": {
+      "workflow": "agent-application-turn",
+      "classification_rule": "application-turn"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationObservationPort.observe": {
+      "workflow": "memory-formation",
+      "classification_rule": "memory-formation"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationProjectRuntimePort.adopt": {
+      "workflow": "agent-application-turn",
+      "classification_rule": "application-adoption"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationProjectRuntimePort.observe_successful_task": {
+      "workflow": "agent-application-turn",
+      "classification_rule": "application-observation"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationProjectRuntimePort.prepare_context": {
+      "workflow": "context-assembly",
+      "classification_rule": "context-assembly"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationRecipeRuntimeFacade.attach_registered": {
+      "workflow": "evaluation-diagnostics",
+      "classification_rule": "management-readiness"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationRecipeRuntimeFacade.create_local_memory_platform": {
+      "workflow": "memory-formation",
+      "classification_rule": "memory-formation"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationRecipeRuntimeFacade.evidence_capabilities": {
+      "workflow": "evidence-authority",
+      "classification_rule": "evidence-authority"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationRecipeRuntimeFacade.evidence_dependency_capabilities": {
+      "workflow": "evidence-authority",
+      "classification_rule": "evidence-authority"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationRecipeRuntimeFacade.graph_bulk_sync_capabilities": {
+      "workflow": "durable-jobs-bulk-sync",
+      "classification_rule": "bulk-sync-capability"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationRecipeRuntimeFacade.graph_proposal_capabilities": {
+      "workflow": "graph-proposal-authority",
+      "classification_rule": "graph-authority"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationRecipeRuntimeFacade.open_registered_runtime": {
+      "workflow": "agent-application-turn",
+      "classification_rule": "authorized-application-invocation"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationRecipeRuntimeFacade.preview_product_runtime": {
+      "workflow": "evaluation-diagnostics",
+      "classification_rule": "management-readiness"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationRecipeRuntimeFacade.product_runtime_capabilities": {
+      "workflow": "evaluation-diagnostics",
+      "classification_rule": "management-readiness"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationRecipeRuntimeFacade.register_product_runtime": {
+      "workflow": "evaluation-diagnostics",
+      "classification_rule": "management-readiness"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationRecipeRuntimeFacade.register_read_plan": {
+      "workflow": "evaluation-diagnostics",
+      "classification_rule": "management-readiness"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationRegisteredRecipeRuntime.before_model": {
+      "workflow": "evaluation-diagnostics",
+      "classification_rule": "management-readiness"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationRegisteredRecipeRuntime.plan_observation": {
+      "workflow": "memory-formation",
+      "classification_rule": "memory-formation"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationRegistrationPort.deployment_readiness": {
+      "workflow": "identity-access",
+      "classification_rule": "identity-access"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationRegistrationPort.get": {
+      "workflow": "identity-access",
+      "classification_rule": "identity-access"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationRegistrationPort.get_memory_blueprint_variant": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationRegistrationPort.list": {
+      "workflow": "identity-access",
+      "classification_rule": "identity-access"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationRegistrationPort.register": {
+      "workflow": "identity-access",
+      "classification_rule": "identity-access"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationRegistrationPort.register_compiled_runtime": {
+      "workflow": "agent-application-turn",
+      "classification_rule": "application-turn"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationRegistrationPort.register_product_runtime": {
+      "workflow": "agent-application-turn",
+      "classification_rule": "application-turn"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationRegistrationProfileFacade.attach": {
+      "workflow": "configuration-release",
+      "classification_rule": "versioned-configuration"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationRelationEvolutionPort.apply": {
+      "workflow": "graph-relation-learning",
+      "classification_rule": "relation-learning"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationRelationEvolutionPort.plan": {
+      "workflow": "graph-relation-learning",
+      "classification_rule": "relation-learning"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationRelationEvolutionPort.retrieve": {
+      "workflow": "graph-relation-learning",
+      "classification_rule": "relation-learning"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationReviewDecisionPort.apply": {
+      "workflow": "durable-jobs-bulk-sync",
+      "classification_rule": "durable-job"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationReviewDecisionPort.receipt": {
+      "workflow": "durable-jobs-bulk-sync",
+      "classification_rule": "durable-job"
+    },
+    "backend/agent_foundation/public/facade.py:FoundationReviewDecisionPort.submit": {
+      "workflow": "durable-jobs-bulk-sync",
+      "classification_rule": "durable-job"
+    },
+    "backend/agent_foundation/public/local_agent_runtime.py:LocalAgentRuntimeHandle.before_model": {
+      "workflow": "evaluation-diagnostics",
+      "classification_rule": "management-readiness"
+    },
+    "backend/agent_foundation/public/local_agent_runtime.py:LocalAgentRuntimeHandle.close": {
+      "workflow": "evaluation-diagnostics",
+      "classification_rule": "management-readiness"
+    },
+    "backend/agent_foundation/public/local_agent_runtime.py:LocalAgentRuntimeHandle.govern_memory": {
+      "workflow": "memory-formation",
+      "classification_rule": "memory-formation"
+    },
+    "backend/agent_foundation/public/local_agent_runtime.py:LocalAgentRuntimeHandle.govern_observation": {
+      "workflow": "memory-formation",
+      "classification_rule": "memory-formation"
+    },
+    "backend/agent_foundation/public/local_agent_runtime.py:LocalAgentRuntimeHandle.memory_governance_status": {
+      "workflow": "memory-formation",
+      "classification_rule": "memory-formation"
+    },
+    "backend/agent_foundation/public/local_agent_runtime.py:LocalAgentRuntimeHandle.observation_governance_status": {
+      "workflow": "memory-formation",
+      "classification_rule": "memory-formation"
+    },
+    "backend/agent_foundation/public/local_agent_runtime.py:LocalAgentRuntimeHandle.plan_observation": {
+      "workflow": "memory-formation",
+      "classification_rule": "memory-formation"
+    },
+    "backend/agent_foundation/public/local_agent_runtime.py:LocalAgentRuntimeManifestV1.seal_manifest": {
+      "workflow": "evaluation-diagnostics",
+      "classification_rule": "management-readiness"
+    },
+    "backend/agent_foundation/public/local_agent_runtime.py:LocalAgentRuntimeManifestV2.seal_manifest": {
+      "workflow": "evaluation-diagnostics",
+      "classification_rule": "management-readiness"
+    },
+    "backend/agent_foundation/public/local_agent_runtime.py:module.build_local_personal_safe_relations_fixture": {
+      "workflow": "agent-application-turn",
+      "classification_rule": "application-adoption"
+    },
+    "backend/agent_foundation/public/local_agent_runtime.py:module.create_local_agent_runtime": {
+      "workflow": "agent-application-turn",
+      "classification_rule": "application-turn"
+    },
+    "backend/agent_foundation/public/review_decisions.py:ReviewDecisionLifecycleFacade.apply": {
+      "workflow": "durable-jobs-bulk-sync",
+      "classification_rule": "durable-job"
+    },
+    "backend/agent_foundation/public/review_decisions.py:ReviewDecisionLifecycleFacade.latest_for_resource": {
+      "workflow": "durable-jobs-bulk-sync",
+      "classification_rule": "durable-job"
+    },
+    "backend/agent_foundation/public/review_decisions.py:ReviewDecisionLifecycleFacade.receipt": {
+      "workflow": "durable-jobs-bulk-sync",
+      "classification_rule": "durable-job"
+    },
+    "backend/agent_foundation/public/review_decisions.py:ReviewDecisionLifecycleFacade.submit": {
+      "workflow": "durable-jobs-bulk-sync",
+      "classification_rule": "durable-job"
+    },
+    "backend/agent_foundation/public/runtime.py:FoundationAccessControllerPort.authorize_current_namespace": {
+      "workflow": "identity-access",
+      "classification_rule": "access-controller"
+    },
+    "backend/agent_foundation/public/runtime.py:FoundationAccessControllerPort.authorize_current_scope": {
+      "workflow": "identity-access",
+      "classification_rule": "access-controller"
+    },
+    "backend/agent_foundation/public/runtime.py:FoundationAccessControllerPort.close": {
+      "workflow": "identity-access",
+      "classification_rule": "access-controller"
+    },
+    "backend/agent_foundation/public/runtime.py:FoundationAccessControllerPort.set_audit_store": {
+      "workflow": "identity-access",
+      "classification_rule": "access-controller"
+    },
+    "backend/agent_foundation/public/runtime.py:FoundationEvidenceAuthorityPort.admit": {
+      "workflow": "evidence-authority",
+      "classification_rule": "evidence-authority"
+    },
+    "backend/agent_foundation/public/runtime.py:FoundationEvidenceAuthorityPort.get_receipt": {
+      "workflow": "evidence-authority",
+      "classification_rule": "evidence-authority"
+    },
+    "backend/agent_foundation/public/runtime.py:FoundationEvidenceAuthorityPort.get_revision": {
+      "workflow": "evidence-authority",
+      "classification_rule": "evidence-authority"
+    },
+    "backend/agent_foundation/public/runtime.py:FoundationEvidenceAuthorityPort.list_revisions": {
+      "workflow": "evidence-authority",
+      "classification_rule": "evidence-authority"
+    },
+    "backend/agent_foundation/public/runtime.py:FoundationEvidenceAuthorityPort.retrieval_watermark": {
+      "workflow": "evidence-retrieval-support",
+      "classification_rule": "evidence-retrieval"
+    },
+    "backend/agent_foundation/public/runtime.py:FoundationEvidenceAuthorityPort.revoke": {
+      "workflow": "evidence-authority",
+      "classification_rule": "evidence-authority"
+    },
+    "backend/agent_foundation/public/runtime.py:FoundationEvidencePort.add_evidence": {
+      "workflow": "evidence-authority",
+      "classification_rule": "evidence-authority"
+    },
+    "backend/agent_foundation/public/runtime.py:FoundationEvidencePort.list_evidence": {
+      "workflow": "evidence-authority",
+      "classification_rule": "evidence-authority"
+    },
+    "backend/agent_foundation/public/runtime.py:FoundationGraphPort.close": {
+      "workflow": "graph-proposal-authority",
+      "classification_rule": "graph-authority"
+    },
+    "backend/agent_foundation/public/runtime.py:FoundationGraphPort.get_graph": {
+      "workflow": "graph-proposal-authority",
+      "classification_rule": "graph-authority"
+    },
+    "backend/agent_foundation/public/runtime.py:FoundationGraphPort.search": {
+      "workflow": "graph-retrieval",
+      "classification_rule": "graph-read"
+    },
+    "backend/agent_foundation/public/runtime.py:FoundationRuntimeHandle.bind_access_controller": {
+      "workflow": "identity-access",
+      "classification_rule": "access-controller"
+    },
+    "backend/agent_foundation/public/runtime.py:FoundationRuntimeHandle.close": {
+      "workflow": "evaluation-diagnostics",
+      "classification_rule": "management-readiness"
+    },
+    "backend/agent_foundation/public/runtime.py:module.create_foundation_access_controller": {
+      "workflow": "identity-access",
+      "classification_rule": "access-controller"
+    },
+    "backend/agent_foundation/public/runtime.py:module.create_foundation_runtime": {
+      "workflow": "evaluation-diagnostics",
+      "classification_rule": "management-readiness"
+    },
+    "backend/agent_foundation/public/runtime.py:module.install_foundation_access_control": {
+      "workflow": "identity-access",
+      "classification_rule": "access-controller"
+    },
+    "backend/agent_foundation/public/runtime.py:module.install_foundation_wire_contract": {
+      "workflow": "evaluation-diagnostics",
+      "classification_rule": "management-readiness"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agent-foundation.local/contracts/foundation-v1-jobs.json",
+  "title": "Agent Foundation Jobs contract",
+  "type": "object",
+  "required": ["namespace", "operations"],
+  "properties": {
+    "namespace": {"const": "/api/foundation/v1/jobs"},
+    "operations": {"type": "object", "required": ["plan", "get", "list", "authorize", "run-next", "cancel", "receipt", "outbox", "acknowledge"], "properties": {
+      "plan": {"const": "POST /"}, "get": {"const": "GET /{job_id}"},
+      "list": {"const": "GET /"}, "authorize": {"const": "POST /{job_id}/authorize"},
+      "run-next": {"const": "POST /{job_id}/run-next"}, "cancel": {"const": "POST /{job_id}/cancel"},
+      "receipt": {"const": "GET /operations/{operation_id}"},
+      "outbox": {"const": "GET /outbox/pending"},
+      "acknowledge": {"const": "POST /outbox/{event_id}/acknowledge"}
+    }}
+  }
+}

@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-foundation-client"
+version = "1.0.0a4"
+description = "Transport-only client for the Agent Foundation public contract"
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+dependencies = ["httpx>=0.28,<1"]
+
+[project.optional-dependencies]
+test = ["pytest>=8.4,<9"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["agent_foundation_client*"]

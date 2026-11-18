@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agent-foundation.local/contracts/foundation-v1-context.json",
+  "title": "Agent Foundation Context contract",
+  "type": "object",
+  "required": ["namespace", "operations"],
+  "properties": {
+    "namespace": {"const": "/api/foundation/v1/context"},
+    "operations": {
+      "type": "object",
+      "required": [
+        "assemble", "create-snapshot", "create-snapshot-metadata", "get-snapshot",
+        "list-snapshots", "replay-snapshot", "compare-snapshots", "preview-resident",
+        "replace-resident", "get-resident", "replay-resident", "operation-receipt"
+      ],
+      "properties": {
+        "assemble": {"const": "POST /assemblies"},
+        "create-snapshot": {"const": "POST /snapshots"},
+        "create-snapshot-metadata": {"const": "POST /snapshot-metadata"},
+        "get-snapshot": {"const": "GET /snapshots/{snapshot_id}"},
+        "list-snapshots": {"const": "GET /snapshots"},
+        "replay-snapshot": {"const": "POST /snapshots/{snapshot_id}/replay"},
+        "compare-snapshots": {"const": "GET /snapshots/compare/{left_id}/{right_id}"},
+        "preview-resident": {"const": "POST /resident/preview"},
+        "replace-resident": {"const": "PUT /resident"},
+        "get-resident": {"const": "GET /resident"},
+        "replay-resident": {"const": "POST /resident/replay"},
+        "operation-receipt": {"const": "GET /operations/{operation_id}"}
+      }
+    }
+  }
+}
